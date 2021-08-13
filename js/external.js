@@ -22,8 +22,8 @@ var userInputFacebookHours = prompt("How many hours did you work this week at Fa
 var totalGoogle = userInputGoogle*userInputGoogleHours
 var totalAmazon = userInputAmazon*userInputAmazonHours
 var totalFacebook = userInputFacebook*userInputFacebookHours
-
 alert("Your total income this week for working at Google, Amazon, and Facebook is " +"$"+ +(totalGoogle+totalAmazon+totalFacebook)+ "");
+
 
 // When the exercise asks you to use a number, instead use a prompt to ask the user for that number.
 // Use an alert to show the results of each problem.
