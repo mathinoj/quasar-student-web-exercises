@@ -31,3 +31,22 @@ alert("Your total income this week for working at Google, Amazon, and Facebook i
 //A student can be enrolled in a class only if the class is not full and the class schedule does not conflict with
 //her current schedule.
 
+let isClassFull = confirm ("Is the class you are wanting to be enrolled for full? Click 'Ok' if the class is full.");
+let response;
+    if (isClassFull == null || isClassFull == true){
+        response = alert("You cannot be enrolled into the class because it is full.");
+    } else{
+        response = alert("You might be enrolled for the class if it does not conflict with your current schedule.");
+    }
+
+let classSchedule = confirm("Does this class conflict with your current schedule? Click 'Ok' if the class conflicts with your current schedule.");
+    let followUpResponse;
+    if (classSchedule == null || classSchedule == true) {
+        followUpResponse = alert("You cannot be enrolled into the class because it conflicts with your schedule");
+    }else{
+        followUpResponse = alert("You can be enrolled for this class because it does not conflict with your schedule and it is not full");
+    }
+
+console.log(isClassFull)
+console.log(classSchedule)
+
