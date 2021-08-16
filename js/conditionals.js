@@ -41,7 +41,6 @@ function analyzeColor() {
 analyzeColor()
 
 
-
 // Don't change the next two lines!
 // These lines create two variables for you:
 // - `colors`: a list of the colors of the rainbow
@@ -71,6 +70,16 @@ console.log(randomColor)
  */
 
 
+var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+var randomColor = colors[Math.floor(Math.random() * colors.length)];
+
+switch (randomColor) {
+    case "colors === randomColor":
+    break;
+}
+
+console.log(randomColor)
+
 
 /**
  * TODO:
@@ -78,6 +87,14 @@ console.log(randomColor)
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
+
+var userInputColor = prompt("Pick a color, any color!")
+
+switch (analyzeColor) {
+    case alert("I knew you'd choose: " +userInputColor+ "!"):
+    break;
+}
+
 
 /* ########################################################################## */
 
@@ -100,6 +117,26 @@ console.log(randomColor)
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
+// 0 = no discount
+// 1 = 10% discount
+// 2 = 25% discount
+// 3 = 35% discount
+// 4 = 50%
+// 5 = Free
+
+
+var numbers = ['0', '1', '2', '3', '4', '5'];
+var randomNumber = numbers[Math.floor(Math.random() * numbers.length)];
+var totalCost = prompt("How much is your total for today's purchases?");
+var calculateTotal = (randomNumber)
+
+switch (calculateTotal){
+    case alert ("Your lucky number is: " +randomNumber+ " ."):
+    break;
+}
+console.log(calculateTotal);
+
+
 
 /**
  * TODO:
