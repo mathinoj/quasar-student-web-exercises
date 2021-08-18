@@ -185,38 +185,38 @@
  */
 // Generate a random number between 0 and 6
 // var luckyNumber = Math.floor(Math.random() * 6);
-
-function calculateTool() {
-
-    var luckyNumber = Math.floor(Math.random() * 6);
-    alert("Your lucky number is: " +luckyNumber+ " .");
-    var totalCost = prompt("How much is your total for today's purchases?");
-
-
-    if (luckyNumber === 0) {
-        alert("Sorry no discount");
-    } else if (luckyNumber === 1) {
-        alert("Your original total cost was: $" +totalCost+ " .")
-        alert ("Your new total cost after your lucky number discount is: $" +(totalCost - (.10 * totalCost))+ " .");
-    } else if (luckyNumber === 2) {
-        alert("Your original total cost was: $" +totalCost+ " .")
-        alert ("Your new total cost after your lucky number discount is: $" +(totalCost - (.25 * totalCost))+ " .");
-    } else if (luckyNumber === 3) {
-        alert("Your original total cost was: $" +totalCost+ " .")
-        alert ("Your new total cost after your lucky number discount is: $" +(totalCost - (.35 * totalCost))+ " .");
-    } else if (luckyNumber === 4) {
-        alert("Your original total cost was: $" +totalCost+ " .")
-        alert ("Your new total cost after your lucky number discount is: $" +(totalCost - (.50 * totalCost))+ " .");
-    } else if (luckyNumber === 5) {
-        alert("Your original total cost was: $" +totalCost+ " .")
-        alert ("Your new total cost after your lucky number discount is: $" +(0)+ " .");
-    }
-
-    console.log(luckyNumber);
-    console.log(totalCost);
-
-}
-calculateTool();
+//
+// function calculateTool() {
+//
+//     var luckyNumber = Math.floor(Math.random() * 6);
+//     alert("Your lucky number is: " +luckyNumber+ " .");
+//     var totalCost = prompt("How much is your total for today's purchases?");
+//
+//
+//     if (luckyNumber === 0) {
+//         alert("Sorry no discount");
+//     } else if (luckyNumber === 1) {
+//         alert("Your original total cost was: $" +totalCost+ " .")
+//         alert ("Your new total cost after your lucky number discount is: $" +(totalCost - (.10 * totalCost))+ " .");
+//     } else if (luckyNumber === 2) {
+//         alert("Your original total cost was: $" +totalCost+ " .")
+//         alert ("Your new total cost after your lucky number discount is: $" +(totalCost - (.25 * totalCost))+ " .");
+//     } else if (luckyNumber === 3) {
+//         alert("Your original total cost was: $" +totalCost+ " .")
+//         alert ("Your new total cost after your lucky number discount is: $" +(totalCost - (.35 * totalCost))+ " .");
+//     } else if (luckyNumber === 4) {
+//         alert("Your original total cost was: $" +totalCost+ " .")
+//         alert ("Your new total cost after your lucky number discount is: $" +(totalCost - (.50 * totalCost))+ " .");
+//     } else if (luckyNumber === 5) {
+//         alert("Your original total cost was: $" +totalCost+ " .")
+//         alert ("Your new total cost after your lucky number discount is: $" +(0)+ " .");
+//     }
+//
+//     console.log(luckyNumber);
+//     console.log(totalCost);
+//
+// }
+// calculateTool();
 
 /**
  * TODO:
@@ -234,3 +234,56 @@ calculateTool();
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
+
+//console.log(Math.sign(NUMBER TO INPUT));
+    //math.sign();
+
+// let x = 100
+// var evenOddPositiveNegativeSum = (+evenOddPositiveNegative + +x);
+
+
+var userEnterNumber = confirm("Would you like to enter a number?");
+if(userEnterNumber === false){
+    console.log(userEnterNumber);
+    alert("Okay I guess.");
+}
+
+if (userEnterNumber === true) {
+    var evenOddPositiveNegative = prompt("Input any number that is even or odd, positive or negative:")
+}
+
+if (evenOddPositiveNegative % 2 === 0){
+    console.log("The number is even");
+    alert("The number is even.");
+} else {
+    console.log("The number is odd");
+    alert("The number is odd.");
+}
+if(evenOddPositiveNegative > 0) {
+    alert("positive");
+} else {
+    alert("negative")
+}
+let x = 100
+var evenOddPositiveNegativeSum = (+evenOddPositiveNegative + +x);
+alert("When added to 100, the number you input equals: " +evenOddPositiveNegativeSum+ " .");
+
+
+// alert("When added to 100, the number you input equals: " +SOME VARIABLE+ " .");
+
+// if(number % 2 == 0) {
+//     console.log("The number is even.");
+// }
+//
+// // if the number is odd
+// else {
+//     console.log("The number is odd.");
+// }
+
+// alert("The number you input is even");
+// alert("The number you input is odd");
+// alert("When added to 100, the number you input equals: " +SOME VARIABLE+ " .");
+// alert("The number you input is negative");
+// alert("The number you input is positive");
+
+console.log(evenOddPositiveNegative);
