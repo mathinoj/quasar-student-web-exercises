@@ -132,37 +132,37 @@
 //var total = (randomNumbers * totalCost);
 
 //var total = alert ("Your total is: " +total+ " .");
-
-
-
-function calculateTool() {
-
-    var numbers = ['0', '1', '2', '3', '4', '5'];
-    var randomNumber = numbers[Math.floor(Math.random() * numbers.length)];
- //   alert("Your lucky number is: " +randomNumber+ " .");  THIS MIGHT BE USED FOR NEXT PROBLEM
-    var totalCost = prompt("How much is your total for today's purchases?");
-
-
-
-    if (randomNumber === '0') {
-        alert("Sorry no discount");
-    } else if (randomNumber === '1') {
-        alert("Your total is: $" +(totalCost - (.10 * totalCost))+ " .");
-    } else if (randomNumber === '2') {
-        alert("Your total is: $" +(totalCost - (.25 * totalCost))+ " .");
-    } else if (randomNumber === '3') {
-        alert("Your total is: $" +(totalCost - (.35 * totalCost))+ " .");
-    } else if (randomNumber === '4') {
-        alert("Your total is: $" +(totalCost - (.50 * totalCost))+ " .");
-    } else if (randomNumber === '5') {
-        alert("Your total is: $" +(0)+ " .");
-    }
-
-    console.log(randomNumber);
-    console.log(totalCost);
-
-}
-calculateTool();
+//
+//
+//
+// function calculateTool() {
+//
+//     var numbers = ['0', '1', '2', '3', '4', '5'];
+//     var randomNumber = numbers[Math.floor(Math.random() * numbers.length)];
+//  //   alert("Your lucky number is: " +randomNumber+ " .");  THIS MIGHT BE USED FOR NEXT PROBLEM
+//     var totalCost = prompt("How much is your total for today's purchases?");
+//
+//
+//
+//     if (randomNumber === '0') {
+//         alert("Sorry no discount");
+//     } else if (randomNumber === '1') {
+//         alert("Your total is: $" +(totalCost - (.10 * totalCost))+ " .");
+//     } else if (randomNumber === '2') {
+//         alert("Your total is: $" +(totalCost - (.25 * totalCost))+ " .");
+//     } else if (randomNumber === '3') {
+//         alert("Your total is: $" +(totalCost - (.35 * totalCost))+ " .");
+//     } else if (randomNumber === '4') {
+//         alert("Your total is: $" +(totalCost - (.50 * totalCost))+ " .");
+//     } else if (randomNumber === '5') {
+//         alert("Your total is: $" +(0)+ " .");
+//     }
+//
+//     console.log(randomNumber);
+//     console.log(totalCost);
+//
+// }
+// calculateTool();
 
 //switch (calculateTotal){
   //  case totalCost:
@@ -185,6 +185,38 @@ calculateTool();
  */
 // Generate a random number between 0 and 6
 // var luckyNumber = Math.floor(Math.random() * 6);
+
+function calculateTool() {
+
+    var luckyNumber = Math.floor(Math.random() * 6);
+    alert("Your lucky number is: " +luckyNumber+ " .");
+    var totalCost = prompt("How much is your total for today's purchases?");
+
+
+    if (luckyNumber === 0) {
+        alert("Sorry no discount");
+    } else if (luckyNumber === 1) {
+        alert("Your original total cost was: $" +totalCost+ " .")
+        alert ("Your new total cost after your lucky number discount is: $" +(totalCost - (.10 * totalCost))+ " .");
+    } else if (luckyNumber === 2) {
+        alert("Your original total cost was: $" +totalCost+ " .")
+        alert ("Your new total cost after your lucky number discount is: $" +(totalCost - (.25 * totalCost))+ " .");
+    } else if (luckyNumber === 3) {
+        alert("Your original total cost was: $" +totalCost+ " .")
+        alert ("Your new total cost after your lucky number discount is: $" +(totalCost - (.35 * totalCost))+ " .");
+    } else if (luckyNumber === 4) {
+        alert("Your original total cost was: $" +totalCost+ " .")
+        alert ("Your new total cost after your lucky number discount is: $" +(totalCost - (.50 * totalCost))+ " .");
+    } else if (luckyNumber === 5) {
+        alert("Your original total cost was: $" +totalCost+ " .")
+        alert ("Your new total cost after your lucky number discount is: $" +(0)+ " .");
+    }
+
+    console.log(luckyNumber);
+    console.log(totalCost);
+
+}
+calculateTool();
 
 /**
  * TODO:
