@@ -20,6 +20,26 @@
 //  * console.logging the function's return value
 //  */
 //
+// shanshan did;
+// function analyzeColor (color) {
+//      var message;
+//
+//
+//      if(color === blue){
+//          message = "blue is color of sky";
+//      } else if (color === "red") {
+//          message = "Strawberrys are that"
+//      } else if (color === "cyan") {
+//          message = "i dont know anything about" +color;
+//      } else {
+//          message = "That's an interesting color";
+//
+//      return message;
+//}
+//
+// analyzeColor(color);
+// console.log(analyzeColor(color));
+//
 // function analyzeColor() {
 //     var userInputColor = prompt("What color is the sky?")
 //     userInputColor = userInputColor.toLowerCase();
@@ -39,7 +59,7 @@
 // }
 //
 // analyzeColor()
-//
+
 //
 // // Don't change the next two lines!
 // // These lines create two variables for you:
@@ -62,7 +82,7 @@
 // }
 //
 // console.log(randomColor)
-//
+//console.log(analyzeColor(randomColor));
 //
 // /**
 //  * TODO:
@@ -287,3 +307,27 @@ alert("When added to 100, the number you input equals: " +evenOddPositiveNegativ
 // alert("The number you input is positive");
 
 console.log(evenOddPositiveNegative);
+
+//var isEnter = confirm("Enter a number?")
+//
+//
+//if (isEnter === true){
+//      prompt("Coo please enter a number")
+//
+//      if (userNumber = prompt
+//
+//
+//
+//
+//
+//
+//
+//userNumber = parseInt(userNumber);
+//
+//
+//
+//
+//
+//
+//
+//
