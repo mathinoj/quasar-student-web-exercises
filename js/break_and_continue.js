@@ -29,28 +29,28 @@
 // }
 //
 // allOddNumbersToX(userInputNumber);
-
-
-var userInputNumber = prompt("Enter a ODD number between 1-50:")
-//var numberToStopAt = userInputNumber;
-
-function allOdds(){
-    for (var i = 0; i <=50; i++) {
-        if (i % 2 !== 0) {
-            console.log('Odd number is: ' + i);
-        }else if (i === userInputNumber) {
-                console.log('You got: ' + userInputNumber)
-                // console.log('We have reached the stopping point: break!');
-                // // use the break keyword to exit from the while loop
-                break;
-                // nothing after the break will get processed
-                console.log('You will never see this.');
-            }
-        }
-    }
-
-
-allOdds();
+//
+//
+// var userInputNumber = prompt("Enter a ODD number between 1-50:")
+// //var numberToStopAt = userInputNumber;
+//
+// function allOdds(){
+//     for (var i = 0; i <=50; i++) {
+//         if (i % 2 !== 0) {
+//             console.log('Odd number is: ' + i);
+//         }else if (i === userInputNumber) {
+//                 console.log('You got: ' + userInputNumber)
+//                 // console.log('We have reached the stopping point: break!');
+//                 // // use the break keyword to exit from the while loop
+//                 break;
+//                 // nothing after the break will get processed
+//                 console.log('You will never see this.');
+//             }
+//         }
+//     }
+//
+//
+// allOdds();
 
 // var userInputNumber = prompt("Enter a ODD number between 1-50:")
 // function oddNumbers() {

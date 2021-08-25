@@ -1,6 +1,6 @@
 "use strict";
 
-/*
+
 //Create a function named showMultiplicationTable that accepts a number and console.logs the multiplication table for that number (just multiply by the numbers 1 through 10)
 //For example, showMultiplicationTable(7) should output
 //
@@ -28,6 +28,13 @@ console.log(randomNumber);
     }
 }
 
+//function (randomNumberOddsEven(){
+//     for(var i = 0; i < 10; i++)
+//         var randNum = Math.floor etc.
+//     var oddOrEven = randNum % 2 == 0 ? "even" : "odd";
+//     console.log(randNum + " is " + oddOrEven);
+//      }
+// }
 
 //Create a for loop that uses console.log to create the output shown below.
 //

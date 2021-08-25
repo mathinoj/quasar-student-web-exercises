@@ -12,7 +12,7 @@
      */
 
         console.log(planetsString);
-        var planetsArray = planetsString.split(" , ");
+        var planetsArray = planetsString.split("|");
         console.log(planetsArray);
 
     /**
@@ -26,8 +26,8 @@
      * string, and <li> tags around each planet.
      */
 
-    var planetsString = planetsArray.join("<br>");
-    console.log(planetsString);
+    var planetsBr = planetsArray.join("<br>");
+    console.log(planetsBr);
 
 })();
 
