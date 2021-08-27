@@ -141,10 +141,11 @@ var books = [
     ];
 
 for (var i = 0; i < books.length; i++) {
-    console.log(books[i].bookPosition + ' is: ' + books[i].title+ " by " +books[i].firstName+ " " +books[i].lastName+ '.');
-    //     console.log(books[i].bookPosition);
-    //     console.log(books[i].title);
-    //     console.log(books[i].firstName+ " " +books[i].lastName);
+    //console.log(books[i].bookPosition + ' is: ' + books[i].title+ " by " +books[i].firstName+ " " +books[i].lastName+ '.');
+        console.log(books[i].bookPosition);
+        console.log(books[i].title);
+        console.log(books[i].firstName+ " " +books[i].lastName);
+        console.log("---");
 }
 
 
