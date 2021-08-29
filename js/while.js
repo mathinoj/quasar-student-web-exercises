@@ -1,17 +1,11 @@
+"use strict";
 
-function whileLoop() {
-    while (i <=65536) {
-     if (i % 2 === 0);
-     //if (i * 2 == 0) {
-       //  console.log(i);
-            console.log('while loop iteration #' + i);
-            i++;
-        }
-    //}
+function timesTwo() {
+    var num = 2;
+
+    while (num <= 65536) {
+        num *= 2;
+        console.log(num);
+    }
 }
-whileLoop();
-
-//while (i < 10) {
-//     console.log('while loop iteration #' + i);
-//     i++;
-// }
+timesTwo();
