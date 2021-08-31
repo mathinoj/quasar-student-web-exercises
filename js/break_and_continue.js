@@ -4,7 +4,7 @@
 'use strict';
 
 var userInputNumber = prompt("Enter a ODD number between 1-50:")
-function allOddNumbersToX () {
+function oddSkip () {
 
        console.log(userInputNumber);
 
@@ -33,7 +33,7 @@ function allOddNumbersToX () {
          }
 }
 
-allOddNumbersToX();
+oddSkip();
 
 
       // var numberToStopAt = userInputNumber < 50;
