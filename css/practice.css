@@ -1,0 +1,54 @@
+.box {
+    background-color: cornflowerblue;
+    border-radius: 10px;
+    width: 300px;
+    height: 150px;
+    animation-name: rotate;
+    animation-duration:5s;
+    /*animation-direction: reverse;*/
+
+}
+
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.box2 {
+    background-color: tomato;
+    border-radius: 10px;
+    width: 100px;
+    height: 150px;
+    animation-name: rotate;
+    animation-duration:2s;
+    /*animation-direction: reverse;*/
+
+}
+
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/*@keyframes slidein {*/
+/*from {*/
+/*    margin-left: 100%;*/
+/*    width: 300%;
+}*/
+    /*to {*/
+    /*    margin-left: 0%;*/
+    /*    width: 100%;*/
+    /*}
+    }*/
+
+
