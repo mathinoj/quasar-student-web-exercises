@@ -27,3 +27,17 @@ function tellFortune([numberOfKids, partnersName, location, job]){
 //var output = "You will have " +numberOfKids+ " children"
 //console.log(output);
 //return output;
+
+
+// function dogsAge(input1, input2){
+//     var output = "Your dogs age is " +(input1 * 7)+ " old in dog years. If your dog is " +(input1 * 7)+ " years old, then you are " +input2 % 7+ " years old."
+//     return output;
+// }
+
+// function dogsAge(input1, input2){
+//     return "Your dogs age is " +(input1 * 7)+ " old in dog years. If your dog is " +(input1 * 7)+ " years old, then you are " +input2 % 7+ " years old.";
+// }
+
+//var ageInHumanYears = dogAge * conversion (inputs dogAge, conversion)
+
+//human age would have to be

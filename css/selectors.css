@@ -12,6 +12,10 @@
     color: blue;
     text-decoration: underline;
 }
+/*
+kenneths answer
+#container h1.fancy-header
+*/
 
 /* selector for all "em" elements */
 .p, em {
@@ -28,3 +32,7 @@
 a:link {
     float:right;
 }
+/*
+kenneths answer
+.article > a
+*/
