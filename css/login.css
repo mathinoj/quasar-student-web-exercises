@@ -68,30 +68,32 @@ fieldset {
 }
 
 .form-control {
+    padding: 4px;
 
-    /*padding-top: 4px;
-    padding-bottom: 4px;
+        /*padding-top: 4px;
+        padding-bottom: 4px;
 
-    /*padding-top: .5em;
-    padding-bottom: .5em;
-    border-top: 4px;
-    border-bottom: 4px;
-
-
-    padding-top: 4px;
-    padding-bottom: 4px;
-    border-top: .5em;
-    border-bottom: .5em;
+        /*padding-top: .5em;
+        padding-bottom: .5em;
+        border-top: 4px;
+        border-bottom: 4px;
 
 
-    /* There must be 4px on top of the text and below the text of an input with this class THIS IS SAYING THAT EVERY INPUT WITH "FORM" SHOULD HAVE 4PX*/
-    /* It should have a separation of .5em from elements on top of it and below it */
+        padding-top: 4px;
+        padding-bottom: 4px;
+        border-top: .5em;
+        border-bottom: .5em;
 
-    /* You'll need to use the `calc` function to make the width of this element match the width of the button */
-    /* See the example at: https://developer.mozilla.org/en-US/docs/Web/CSS/calc */
-    /* HINT: Calculate based on the padding of the `.btn` class */
-    /* HINT: Examples are available at: https://glitch.com/~input-button-width */
-    width: calc(100% - 8px);
+
+        /* There must be 4px on top of the text and below the text of an input with this class THIS IS SAYING THAT EVERY INPUT WITH "FORM" SHOULD HAVE 4PX*/
+        /* It should have a separation of .5em from elements on top of it and below it */
+
+        /* You'll need to use the `calc` function to make the width of this element match the width of the button */
+        /* See the example at: https://developer.mozilla.org/en-US/docs/Web/CSS/calc */
+        /* HINT: Calculate based on the padding of the `.btn` class */
+        /* HINT: Examples are available at: https://glitch.com/~input-button-width */
+        width: calc(100% - 8px);
+    }
 }
 
 

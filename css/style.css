@@ -1,15 +1,63 @@
-.fancy-header{
-    color: tomato; /*chosen cuz you like tomatoes*/
-    text-decoration: double; /*messed with this but most things don't do nada*/
-}
 
 
 h1 {
-    text-align: center
+    color: tomato; /*chosen cuz you like tomatoes*/
+    text-decoration: double; /*messed with this but most things don't do nada*/
+    text-align: center;
+    text-decoration: underline;
 }
 
 
 
-h2.fancy-header{
-    color: coral;
+h2{
+    color: firebrick;
+    text-decoration: underline;
+}
+
+body{
+    background-color: orange;
+}
+
+body {
+    background-image:
+            url(/img/mantis.jpg);
+    height: 500px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+ul {
+    list-style: georgian;
+}
+
+body {
+    font-family: 'Creepster', sans-serif;
+}
+
+table, th, td {
+    border: 4px solid black;
+    background-color: rosybrown;
+    color: midnightblue;
+}
+
+/* unvisited link (:link) */
+a:link {
+    color:red;
+}
+
+/* visited link (:visited) */
+a:visited {
+    color:black;
+}
+
+/* mouse hover over link (:hover) */
+a:hover {
+    color:blue;
+}
+
+/* active/selected link (:active) */
+a:active {
+    color:green;
 }
