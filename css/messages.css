@@ -1,0 +1,53 @@
+body, html {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Ubuntu, sans-serif;
+}
+
+body {
+    padding: .5em;
+    /*padding: 1em; Padding is the space between the edge of the content area and the border.
+    /* This form should be separated from other elements by 1em */
+    /* There must be 1em between the content and the border of this element */
+}
+
+.message-info {
+    padding: .5em;
+    border: 3px solid royalblue;
+    background-color: royalblue;
+    color: midnightblue;
+    border-radius: 5px;
+    width: 50%;
+}
+
+.message-success{
+    padding: .5em;
+    border: 3px solid darkseagreen;
+    background-color: darkseagreen;
+    color: darkgreen;
+    border-radius: 5px;
+    width: 50%;
+    margin-top: .5em
+}
+
+.message-warning{
+    padding: .5em;
+    border: 3px solid lightgoldenrodyellow;
+    background-color: lightgoldenrodyellow;
+    color: rosybrown;
+    border-radius: 5px;
+    width: 50%;
+    margin-top: .5em
+}
+
+.message-error{
+    padding: .5em;
+    border: 3px solid palevioletred;
+    background-color: palevioletred;
+    color: saddlebrown;
+    border-radius: 5px;
+    width: 50%;
+    margin-top: .5em
+}
