@@ -11,6 +11,7 @@ body, html {
 }
 
 form {
+    margin: 1em;
     padding: 1em;
     /*padding: 1em; Padding is the space between the edge of the content area and the border.
     /* This form should be separated from other elements by 1em */
@@ -40,8 +41,8 @@ fieldset {
 
 .form-group {
     width: 100%;
-    padding-top: .5em;
-    padding-bottom: .5em;
+    margin-top: .5em;
+    margin-bottom: .5em;
     /* This element must use 100% of the width */
     /* It should have a separation of .5em from elements on top of it and below it*/
 }
@@ -68,21 +69,10 @@ fieldset {
 }
 
 .form-control {
-    padding: 4px;
-
-        /*padding-top: 4px;
-        padding-bottom: 4px;
-
-        /*padding-top: .5em;
-        padding-bottom: .5em;
-        border-top: 4px;
-        border-bottom: 4px;
-
-
         padding-top: 4px;
         padding-bottom: 4px;
-        border-top: .5em;
-        border-bottom: .5em;
+        margin-top: .5em;
+        margin-bottom: .5em;
 
 
         /* There must be 4px on top of the text and below the text of an input with this class THIS IS SAYING THAT EVERY INPUT WITH "FORM" SHOULD HAVE 4PX*/
@@ -93,6 +83,7 @@ fieldset {
         /* HINT: Calculate based on the padding of the `.btn` class */
         /* HINT: Examples are available at: https://glitch.com/~input-button-width */
         width: calc(100% - 8px);
+    /*mess with the px part. SHAN SHAN added the margin or padding and it equalled to 4, not 8.
     }
 }
 

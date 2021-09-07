@@ -50,3 +50,20 @@
 // 7777777
 // 88888888
 // 999999999
+
+//Create a function called 'isTwo' that takes a number as a parameter.
+//  * The function should return a boolean value based on whether or not the passed
+//  * number is the number 2.
+//  *
+//  * Example
+//  * > isTwo(1) // returns false
+//  * > isTwo(2) // returns true
+//  * > isTwo(3) // returns false
+//  *
+//  * Call the function 'isTwo' passing the variable 'random' as a argument.
+
+function isTwo(){
+var random = Math.floor((Math.random() * 3) + 1);
+    return random === 2;
+}
+isTwo();
