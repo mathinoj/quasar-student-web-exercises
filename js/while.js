@@ -41,8 +41,8 @@ function cones() {
     var totalCones = 100 - (allCones + conesSold)
     do {
         console.log("A customer bought this many cones: " + conesSold);
-    } while (totalCones < 0);
-    if (totalCones < 0) {
+    } while (totalCones <= 0);
+    if (totalCones === 0) {
         console.log("Cones sold out")
     } else if ((allCones + conesSold) < 100) {
         console.log("You need to sell " + totalCones);

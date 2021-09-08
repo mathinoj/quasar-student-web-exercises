@@ -84,6 +84,8 @@ a {
     float: right;
     position: center;
     margin: 1em;
+    line-height: 80px;
+    /*line-height: 80px - based this off .profile height of 80px*/
 }
 .profile-details{
     float: left;
@@ -107,24 +109,26 @@ a {
     width: calc(25% - 1em);
 }
 .container{
-    padding-right: 2em;
+    /*padding-right: 2em; THIS IS WHAT YOU DID*/
+    margin-top: 2em;
 }
 .media{
     width: 100%;
     background-color: var(--light-bg);
-    border-bottom: 1px;
-    --separator-color: black;
+    border-bottom: 1px solid var(--separator-color);
     padding: .5em;
     overflow: auto;
+    /*added seperator-color to border bottom BUT YOU COULD OF ADDED BORDER COLOR - BLACK*/
 }
 .media-image{
     max-width: 50px;
     margin-top: 1.33em;
-    float: inherit;
+    float: left;
 }
 .media-body{
-    float: inherit;
-    width: calc(100% - 1.33em);
+    float: right;
+    width: calc(100% - 50px);
+    /*got the 50px from max-width on media-image YOU DID 4em as a GUESS*/
 }
 .profile-items{
     padding: 0;
@@ -134,8 +138,4 @@ a {
     margin: .5em
 }
 
-
-/*absolute positioning to center the avatar, you'll need to adjust the top value. Use the class profile-image for this purpose.*/
-
-/*Give a height of 80px to the profile class. To which side should we float the .profile-form? One way to center text vertically is by changing its line-height. If it matches the height of the container the text will be centered vertically. Center the button inside the .profile-form element.*/
 
