@@ -1,14 +1,14 @@
 "use strict";
 
-// function timesTwo() {
-//     var num = 2;
-//
-//     while (num <= 65536) {
-//         num *= 2;
-//         console.log(num);
-//     }
-// }
-// timesTwo();
+function timesTwo() {
+    var num = 2;
+
+    while (num <= 65536) {
+        num *= 2;
+        console.log(num);
+    }
+}
+timesTwo();
 
 
 //Do While Loop
@@ -39,22 +39,16 @@ function cones() {
     console.log(allCones)
     var conesSold = Math.floor(Math.random() * 5) + 1
     var totalCones = 100 - (allCones + conesSold)
+    var onlyConesLeft = (allCones + conesSold) - 100
     do {
         console.log("A customer bought this many cones: " + conesSold);
-    } while (totalCones <= 0);
+    } while (totalCones >= 100);
     if (totalCones === 0) {
-        console.log("Cones sold out")
+        console.log("Yay I sold them all")
     } else if ((allCones + conesSold) < 100) {
         console.log("You need to sell " + totalCones);
     } else {
-        console.log("I can't sell you " + conesSold + " cuz I only have ")
+        console.log("I can't sell you " + conesSold + " cuz I only have " +onlyConesLeft+ " left to sell.")
     }
 }
 cones();
-
-//var i = 10;
-//
-// do {
-//     console.log('while loop iteration #' + i);
-//     i++;
-// } while (i < 10);
