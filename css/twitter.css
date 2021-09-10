@@ -61,6 +61,7 @@ a {
 .btn-large {
     font-size: 1.3em;
     padding: 10px;
+
 }
 .img-circle {
     border-radius: 100%;
@@ -79,11 +80,15 @@ a {
 .profile-image {
     position: absolute;
     top: 45%;
+    /*in review they did 248px*/
+}
+.profile {
+    height: 80px;
 }
 .profile-form{
     float: right;
-    position: center;
-    margin: 1em;
+    /*position: center;*/
+    /*margin: 1em;*/
     line-height: 80px;
     /*line-height: 80px - based this off .profile height of 80px*/
 }
@@ -129,7 +134,7 @@ a {
 .media-body{
     float: right;
     width: calc(100% - 50px);
-    /*got the 50px from max-width on media-image YOU DID 4em as a GUESS*/
+    /*got the 50px from max-width (SEE ABOVE) on media-image YOU DID 4em as a GUESS*/
 }
 .profile-items{
     padding: 0;

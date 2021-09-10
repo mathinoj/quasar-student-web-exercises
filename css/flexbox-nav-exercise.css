@@ -1,0 +1,70 @@
+/*The navbar must have the following:*/
+
+/*box-sizing: border-box for all elements*/
+/*link text, the logo, and icons are surrounded by anchor tags*/
+/*links turn blue on hover*/
+/*anchor tags are display: inline-block*/
+/*clickable area of links immediately flow from one link to the next (padding will help achieve this)*/
+/*Google Fonts used for logo and link text ("Montserrat" and "Work Sans", respectively)*/
+/*the "Logo" text is 3em with .2em of padding above and below*/
+/*                              no explicit height given to the navbar*/
+/*                              default styling is removed as needed from the body, unordered list and anchor tag elements*/
+/*logo is absolutely positioned to completely center text on the navbar*/
+
+
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+nav {
+    background: #bababa;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    /*display: inline-block;*/
+    /*display: flex;*/
+    flex-direction: row;
+}
+nav a {
+    text-decoration: none;
+    color: black;
+    font-family: Montserrat, Work Sans, sans-serif;
+    /*display: inline-block;*/
+    padding: .5em;
+    /*display: flex;*/
+    /*flex-direction: row;*/
+}
+nav a:hover {
+    background: blue;
+}
+
+nav ul li:nth-child(6) {
+    /*
+        this allows the last flex item to be right justified
+        by filling remaining space to the left of the flex item with margin
+    */
+    margin-left: auto;
+}
+
+/*nav ul li:nth-child(5) {*/
+/*    !**/
+/*        this allows the last flex item to be right justified*/
+/*        by filling remaining space to the left of the flex item with margin*/
+/*    *!*/
+/*    align-items: center;*/
+/*}*/
+
+.logo {
+    /* here we set a larger size along the main axis and push the div a bit up for aesthetics */
+    font-size: 3em;
+    padding-top: .2em;
+    padding-bottom: .2em;
+    /*position: absolute;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
+
+}
