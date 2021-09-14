@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+    <title>Media Queries</title>
+  <style>
+    /*the stuff below would go in CSS stylesheet*/
+    .box {
+      background-color: rebeccapurple;
+      width:150px;
+      height: 150px;
+      border: 1px solid crimson;
+      margin: .5em;
+      display: none;
+      /*USED IN 1/2 EXAMPLE and for ALL EXAMPLES*/
+    }
+    #box1 {
+      display: inline-block;
+      /*ADDED IN SECOND EXAMPLE*/
+    }
+
+    @media screen and (min-width:576px) {
+      #box1{
+        background-color: darkred;
+        /*ADDED IN SECOND EXAMPLE*/
+      }
+      #box2{
+        display: inline-block;
+        /*ADDED IN SECOND EXAMPLE*/
+      }
+
+      /*.box {*/
+      /*    display: inline-block; THIS WAS FIRST EXAMPLE*/
+      /*}*/
+    }
+
+
+    @media screen and (min-width:768px) {
+      #box2{
+        background-color: darksalmon;
+      }
+      #box3{
+        display: inline-block;
+        /*THIRD EXAMPLE*/
+      }
+    }
+
+
+    @media screen and (min-width:992px) {
+      #box3 {
+        background-color: yellow;
+      }
+      #box4 {
+        display: inline-block;
+        /*THIRD EXAMPLE*/
+      }
+    }
+
+
+    @media screen and (min-width:1200px) {
+      #box4 {
+        background-color: green;
+      }
+      #box5 {
+        display: inline-block;
+        /*FOURTH EXAMPLES*/
+      }
+      #container {
+        display: flex;
+        width: 50%;
+        flex-wrap: wrap;
+        /*ADDITIONAL EXAMPLE AND HAD TO ADD DIV CONTAINER TO BODY SEE BELOW*/
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!--div.box*5 = see below-->
+<div id="container"></div>
+<div id="box1" class="box"></div>
+<div id="box2" class="box"></div>
+<div id="box3" class="box"></div>
+<div id="box4" class="box"></div>
+<div id="box5" class="box"></div>
+
+
+</body>
+</html>

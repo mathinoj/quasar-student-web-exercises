@@ -18,6 +18,11 @@
 body {
     margin: 0;
 }
+/*html, body {*/
+/*    font-family: 'Work Sans', sans-serif; MARGIN: 0;*/
+/*    SHAN SHAN DID THIS*/
+/*}*/
+
 nav {
     background: #bababa;
 }
@@ -33,9 +38,13 @@ ul {
     justify-content: flex-end;
     /*align-items: center;*/
     /*margin-left: auto;*/
-
-
 }
+/*.nav-container {*/
+/*    display: flex; ALIGN-ITEMS: CENTER; JUSTIFY-FLEX: END; POSITION RELATIVE;*/
+/*    background-color:*/
+/*SHAN SHAN DID THIS*/
+/*}*/
+
 li {
     /*display: flex;*/
     /*align-items: center;*/
@@ -57,9 +66,23 @@ nav a {
     /*flex-direction: row;*/
     /*margin:0 auto;*/
     /*margin-right: auto;*/
+    /*REMOVE NAV*/
+    /*SHAN ONLY DID INLINE BLOCK, TEST DECORATION, AND COLOR, 1EM PADDING TOP BOTTOM, .5 ON LEFT/RIGHT*/
 }
+
+/*#logo{*/
+/*    font-family: Montserrat, Work Sans, sans-serif;*/
+/*    font-size: 3em;*/
+/*    padding: .2em 0;*/
+/*SHAN SHAN DID THIS*/
+/*}*/
+
+
+
+
 nav a:hover {
     background: blue;
+    /*REMOVE NAV*/
 }
 
 nav ul li:nth-child(5) {
@@ -84,12 +107,12 @@ nav ul li:nth-child(5) {
 }
 
 
-/*nav ul li:nth-child(6) {*/
-/*    !**/
+/*.nav-container li:nth-child(4) {*/
+/*    !**/SHAN SHAN DID THIS
 /*        this allows the last flex item to be right justified*/
 /*        by filling remaining space to the left of the flex item with margin*/
 /*    *!*/
-/*    margin-left: auto;*/
+/*    margin-right: auto;*/
 /*}*/
 
 nav ul li:nth-child(5) {
@@ -117,3 +140,15 @@ nav ul li:nth-child(5) {
     /*align-items: center;*/
 
 }
+
+/*p {*/
+/*    text-align: center;*/
+/*SHAN SHAN ADDED THIS*/
+/*}*/
+
+/*.logo-container {*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 50%;*/
+/*    transform: translate(-50%, 0);*/
+/*}*/

@@ -1,0 +1,75 @@
+/*Use the existing html structure and classes to style the page to match the wireframes below. You should not modify the existing html to achieve this.*/
+/*Test your results by resizing your browser window, or using chrome's mobile device emulation.*/
+
+body {
+    /*display: flex;*/
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.alert-info{
+    /*display: flex;*/
+    box-sizing: border-box;
+    width: 500px;
+    height: 50px;
+    padding: 30px;
+    border: 1px solid lightgrey;    /*width: 50em;*/
+    background-color: powderblue;
+    font-size: 2em;
+    /*height: 25em;*/
+    align-items: center;
+    /*height: 50%;*/
+    /*width: 75%*/
+    justify-content: center;
+    /*flex-wrap: wrap;*/
+}
+
+h1 {
+    font-size: 5em;
+    margin: 0;
+}
+
+/*nav*/
+/*ul*/
+/*nav a*/
+
+ul {
+    list-style-type:none;
+    display: flex;
+}
+.nav-links {
+    /*border: 1px solid blue;*/
+    /*background-color: #bababa;*/
+    /*font-size: 1.2em;*/
+    /*display: inline-block;*/
+    /*vertical-align: top;*/
+    /*height: 50px;*/
+    /*width: 500px;*/
+    /*display: flex;*/
+    /*list-style-type:none;*/
+    align-items: center;
+    /*justify-content: center;*/
+    /*justify-content: space-around;*/
+    flex-direction: column;
+
+}
+
+li {
+    border: 1px solid blue;
+    background-color: #bababa;
+    font-size: 1.2em;
+    /*display: inline-block;*/
+    vertical-align: top;
+    height: 50px;
+    width: 500px;
+    display: flex;
+    list-style-type:none;
+    align-items: center;
+    /*justify-content: center;*/
+    /*justify-content: space-around;*/
+}
+
+.header-img {
+
+}

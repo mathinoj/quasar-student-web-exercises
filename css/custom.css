@@ -1,0 +1,31 @@
+/*Create a file custom.css and create rules for .jumbotron and h1 to get the result shown in the image below. This component should be hidden for devices with small screens. See the documentation for the display utility classes to hide the jumbotron properly*/
+.my-sm-0 {
+    color: black;
+    border-color: lightgrey;
+}
+
+.fa-user {
+    color: #848487;
+    padding-right: 3px;
+}
+
+.btn-outline-secondary{
+    border: none;
+}
+
+h1{
+    background-color: #E6ECF0;
+    opacity: 0.5;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.jumbotron-fluid {
+    background-image: url("../img/pizza.png");
+    background-size: cover;
+}
+
+/*.crust {*/
+/*    text: right;*/
+/*}*/
