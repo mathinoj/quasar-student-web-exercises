@@ -34,7 +34,7 @@
         console.log(mainHeader)
 
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-        var mainHeader = document.getElementById("main-header");
+        document.getElementById("main-header");
         console.log(mainHeader);
 
         mainHeader.innerHTML = "JavaSCRAPT is Gucci!"
@@ -52,28 +52,33 @@
         console.log(listItems);
 
         // TODO: Set text color on every other list item to grey
-        // var listItems = document.getElementsByClassName('even');
-        // console.log(listItems[0]);
-        //
-        //
-        // for (var i=0; i < listItems.length; i++){
-        //     console.log(listItems[i]);
-        // }
-        listItems.style.color = "red"
 
-        //
-        // for (var i = 0; i < evenElements.length; i++) {
-        //     console.log(evenElements[i]);
-        // }
+            for (var i = 0; i <= listItems.length; i++){
+                if (i % 2 !== 0)
+                    listItems[i].style.color = "grey";
+            }
 
-        // Prints:
-        // li.even.list-one-item
-        // li.even.list-two-item
+            // for (var i = 0; i < listItems.length; i+=2){
+            //         listItems[i].style.color = "grey";
+            // }
+
+
+
+
         // TODO: Set text color of li with dbid = 1 to blue
-        //     .style.color = "blue"
+        // for (var i = 0; i < listItems.length; i++) {
+        //     var dbId = listItems[i].getAttribute("data-dbid");
+        //     console.log(dbId);
+        for (var i = 0; i < listItems.length; i++) {
+            var dbid = listItems[i].getAttribute('data-dbid');
+        }
+        dbid[0].style.color = "blue";
+
+        //USE A FOR LOOP OR MAYBE EVEN FOR EACH LOOP
 
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
-        // var subParagraphs = ;
+        var subParagraphs = document.getElementsByClassName("sub-paragraph");
+        console.log(subParagraphs);
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
     })();
