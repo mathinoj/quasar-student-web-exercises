@@ -1,16 +1,3 @@
-/*The navbar must have the following:*/
-
-/*box-sizing: border-box for all elements*/
-/*link text, the logo, and icons are surrounded by anchor tags*/
-/*links turn blue on hover*/
-/*anchor tags are display: inline-block*/
-/*clickable area of links immediately flow from one link to the next (padding will help achieve this)*/
-/*Google Fonts used for logo and link text ("Montserrat" and "Work Sans", respectively)*/
-/*the "Logo" text is 3em with .2em of padding above and below*/
-/*                              no explicit height given to the navbar*/
-/*                              default styling is removed as needed from the body, unordered list and anchor tag elements*/
-/*logo is absolutely positioned to completely center text on the navbar*/
-
 
 * {
     box-sizing: border-box;
@@ -18,10 +5,9 @@
 body {
     margin: 0;
 }
-/*html, body {*/
-/*    font-family: 'Work Sans', sans-serif; MARGIN: 0;*/
-/*    SHAN SHAN DID THIS*/
-/*}*/
+html, body {
+    font-family: 'Work Sans', sans-serif; margin: 0;
+}
 
 nav {
     background: #bababa;
@@ -30,125 +16,54 @@ ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    /*display: inline-block;*/
     display: flex;
-    /*flex-direction: row;*/
-    /*margin:0 auto;*/
-    /*margin-right: auto;*/
     justify-content: flex-end;
-    /*align-items: center;*/
-    /*margin-left: auto;*/
 }
-/*.nav-container {*/
-/*    display: flex; ALIGN-ITEMS: CENTER; JUSTIFY-FLEX: END; POSITION RELATIVE;*/
-/*    background-color:*/
-/*SHAN SHAN DID THIS*/
-/*}*/
 
-li {
-    /*display: flex;*/
-    /*align-items: center;*/
-    /*flex-direction: row;*/
-    /*margin:0 auto;*/
-    /*margin-right: auto;*/
-    /*margin-right: auto;*/
-    /*margin-left: auto;*/
-    /*justify-content: flex-end;*/
-    /*justify-content: flex-start;*/
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+/*SHAN SHAN DID THIS*/
 }
-nav a {
+
+
+a {
     text-decoration: none;
     color: black;
-    font-family: Montserrat, Work Sans, sans-serif;
     display: inline-block;
-    padding: .5em;
-    /*display: flex;*/
-    /*flex-direction: row;*/
-    /*margin:0 auto;*/
-    /*margin-right: auto;*/
+    padding: 1em .5em;
     /*REMOVE NAV*/
     /*SHAN ONLY DID INLINE BLOCK, TEST DECORATION, AND COLOR, 1EM PADDING TOP BOTTOM, .5 ON LEFT/RIGHT*/
 }
 
-/*#logo{*/
-/*    font-family: Montserrat, Work Sans, sans-serif;*/
-/*    font-size: 3em;*/
-/*    padding: .2em 0;*/
-/*SHAN SHAN DID THIS*/
-/*}*/
 
 
-
-
-nav a:hover {
+a:hover {
     background: blue;
     /*REMOVE NAV*/
 }
 
-nav ul li:nth-child(5) {
-    /*
-        this allows the last flex item to be right justified
-        by filling remaining space to the left of the flex item with margin
-    */
-    font-size: 2em;
-    padding-top: .2em;
-    padding-bottom: .2em;
-    display: flex;
-    position: absolute;
 
-    /*align-items: center;*/
-    /*flex-direction: row;*/
-    /*margin:0 auto;*/
-    /*margin-right: auto;*/
-    /*margin-right: auto;*/
-    /*margin-left: auto;*/
-    /*justify-content: flex-end;*/
-    /*justify-content: flex-start;*/
-}
-
-
-/*.nav-container li:nth-child(4) {*/
-/*    !**/SHAN SHAN DID THIS
+.nav-container li:nth-child(4){
+/*!*    !**!SHAN SHAN DID THIS*/
 /*        this allows the last flex item to be right justified*/
 /*        by filling remaining space to the left of the flex item with margin*/
-/*    *!*/
-/*    margin-right: auto;*/
-/*}*/
-
-nav ul li:nth-child(5) {
-    /*
-        this allows the last flex item to be right justified
-        by filling remaining space to the left of the flex item with margin
-    */
-    align-items: center;
-    /*flex-direction: row;*/
-    /*margin:0 auto;*/
-    /*margin-right: auto;*/
-    /*margin-right: auto;*/
-    margin-left: auto;
-    /*justify-content: flex-end;*/
-    /*justify-content: flex-start;*/
+/*    */
+    margin-right: auto;
 }
 
-/*.logo {*/
-/*    !* here we set a larger size along the main axis and push the div a bit up for aesthetics *!*/
-/*    font-size: 3em;*/
-/*    padding-top: .2em;*/
-/*    padding-bottom: .2em;*/
-    /*position: absolute;*/
-    /*justify-content: center;*/
-    /*align-items: center;*/
 
+.logo{
+    position: absolute;
+    margin-top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-family: Montserrat, Work Sans, sans-serif;
+    font-size: 2.5em;
+    padding: .2em 0;
+    display: flex;
+    /*align-items: flex-start;*/
 }
-
-/*p {*/
-/*    text-align: center;*/
-/*SHAN SHAN ADDED THIS*/
-/*}*/
-
-/*.logo-container {*/
-/*    position: absolute;*/
-/*    top: 0;*/
-/*    left: 50%;*/
-/*    transform: translate(-50%, 0);*/
-/*}*/
