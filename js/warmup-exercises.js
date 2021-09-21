@@ -62,14 +62,14 @@
 // }
 // tacoTuesday();
 
-function tacoTuesday (arr){
-    for(var i = 0; i < arr.length; i++){
-        if(arr[i].includes("taco")){
-            return true;
-        }
-    }
-    return false;
-}
+// function tacoTuesday (arr){
+//     for(var i = 0; i < arr.length; i++){
+//         if(arr[i].includes("taco")){
+//             return true;
+//         }
+//     }
+//     return false;
+// }
 // USE STRING.INLCLUDES()
 // TO TEST THIS FUNCTION JUST COPY AND PASTE INTO BROWSER CONSOLE. THEN DO "TACOTUESDAY('')"
 
@@ -81,9 +81,9 @@ function tacoTuesday (arr){
 // var fish4 = { type: "redfish", sizeInches: 29, locationCaught: "Braunig Lake", color: "red"}
 // var kensCatch = [fish1, fish2, fish3, fish4]
 // Also, well, I caught these - don't ask me where
-var sewerFish1 = { type: "tropical and unknown", sizeInches: 6, locationCaught: "sewer", color: "green"}
-var sewerFish2 = { type: "tropical and unknown", sizeInches: 3, locationCaught: "sewer", color: "blue"}
-var strangeCatch = [sewerFish1, sewerFish2]
+// var sewerFish1 = { type: "tropical and unknown", sizeInches: 6, locationCaught: "sewer", color: "green"}
+// var sewerFish2 = { type: "tropical and unknown", sizeInches: 3, locationCaught: "sewer", color: "blue"}
+// var strangeCatch = [sewerFish1, sewerFish2]
 // Bad news - I need some help with knowing what all I caught
 // Write a function named fishingWeekend that takes in an array of fish objects
 // fishingWeekend() will alert me with three seperate alerts from that array of fish objects
@@ -92,32 +92,93 @@ var strangeCatch = [sewerFish1, sewerFish2]
 // 3. An alert letting me know if I got any catfish [“You caught some catfish tonight!“
 // HINT: Do NOT try to do all of these in one go
 //  Write your function out incrementally, one alert at a time, piece by piece to eventually combine into the larger function desired.
-function fishingWeekend(arr) {
-    var fish1 = {type: "channel catfish", sizeInches: 18, locationCaught: "Lions Park", color: "blue"};
-    var fish2 = {type: "channel catfish", sizeInches: 19, locationCaught: "Lions Park", color: "blue"};
-    var fish3 = {type: "redfish", sizeInches: 22, locationCaught: "Braunig Lake", color: "red"};
-    var fish4 = {type: "redfish", sizeInches: 29, locationCaught: "Braunig Lake", color: "red"}
-    var kensCatch = [fish1, fish2, fish3, fish4]
-    // var randomItem = kensCatch[Math.floor(Math.random()*kensCatch.length)];
-    let fish = kensCatch[Math.floor(Math.random() * kensCatch.length)]
-    console.log(fish)
-
-    for (var i = 0; i < kensCatch.length; i++) {
-        if (kensCatch[i].includes("red" || "blue")){
-            // return alert("You caught " +kensCatch
-            return true
-        } else if ((kensCatch[i].includes("red" && "blue"))) {
-            return alert("Now you got " +kensCatch)
-        } else {
-            return false;
-        }
-    }
-    alert("you got " +kensCatch)
-}
-
+// function fishingWeekend(arr) {
+//     var fish1 = {type: "channel catfish", sizeInches: 18, locationCaught: "Lions Park", color: "blue"};
+//     var fish2 = {type: "channel catfish", sizeInches: 19, locationCaught: "Lions Park", color: "blue"};
+//     var fish3 = {type: "redfish", sizeInches: 22, locationCaught: "Braunig Lake", color: "red"};
+//     var fish4 = {type: "redfish", sizeInches: 29, locationCaught: "Braunig Lake", color: "red"}
+//     var kensCatch = [fish1, fish2, fish3, fish4]
+//     // var randomItem = kensCatch[Math.floor(Math.random()*kensCatch.length)];
+//     let fish = kensCatch[Math.floor(Math.random() * kensCatch.length)]
+//     console.log(fish)
+//
+//     for (var i = 0; i < kensCatch.length; i++) {
+//         if (kensCatch[i].includes("red" || "blue")){
+//             // return alert("You caught " +kensCatch
+//             return true
+//         } else if ((kensCatch[i].includes("red" && "blue"))) {
+//             return alert("Now you got " +kensCatch)
+//         } else {
+//             return false;
+//         }
+//     }
+//     alert("you got " +kensCatch)
+// }
+//
 
 
 // if(arr[i].includes("taco")){
 //     return true;
 
 // || (kensCatch[i].includes("red" && "blue"))
+
+// TODO: Finish coding this program. You need to stop the setInterval() method after the showTime() function has run five times
+// let count = 0;
+// function showTime() {
+//     // return new date and time
+//     let dateTime = new Date();
+//     // return the time
+//     let time = dateTime.toLocaleTimeString();
+//     count += 1;
+//     //if the count reaches 5, stop the program.
+//     if (count >= 3){
+//         console.log("Lst timestamp.")
+//         clearInterval(display);
+//     }
+//     console.log(time)
+// }
+// let display = setInterval(showTime, 9000);
+
+// function greet(){
+//     console.log("YO");
+// }
+// setTimeout(greet, 2000);
+// or window.setTimeout(greet, 2000);
+
+// function greet(){
+//     console.log("YO");
+// }
+// var delayedGreeting = setTimeout(greet, 2000);
+//
+// window.clearTimeout(delayedGreeting);
+// or clearTimeout(delayedGreeting)
+
+'use strict';
+
+// function logEvens (num) {
+//     for (var i = 1; i < 100; i++) {
+//         if (i % 2 !== 0){
+//          return num;
+//         // } else {
+//         //     alert("input even number");
+//         }
+//     }
+//     console.log("even number here " +i)
+// }
+
+
+function logEvens (num) {
+    for (var i = 0; i <= num; i++) {
+        if (i % 2 === 0){
+            console.log("even number here " +i);
+        }
+    }
+}
+
+function logOdds(num){
+    for (var i = 0; i <= num; i++){
+        if (i % 2 !== 0){
+            console.log("odd number here " +i);
+        }
+    }
+}
