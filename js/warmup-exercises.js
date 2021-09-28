@@ -167,18 +167,28 @@
 // }
 
 
-function logEvens (num) {
-    for (var i = 0; i <= num; i++) {
-        if (i % 2 === 0){
-            console.log("even number here " +i);
-        }
-    }
-}
+// function logEvens (num) {
+//     for (var i = 0; i <= num; i++) {
+//         if (i % 2 === 0){
+//             console.log("even number here " +i);
+//         }
+//     }
+// }
+//
+// function logOdds(num){
+//     for (var i = 0; i <= num; i++){
+//         if (i % 2 !== 0){
+//             console.log("odd number here " +i);
+//         }
+//     }
+// }
 
-function logOdds(num){
-    for (var i = 0; i <= num; i++){
+function logNum (num){
+    for (var i = 1; i <= num; i++) {
         if (i % 2 !== 0){
-            console.log("odd number here " +i);
+            console.log(+i + " is an odd number.");
+        } else {
+            console.log(+i + " is an even number.")
         }
     }
 }

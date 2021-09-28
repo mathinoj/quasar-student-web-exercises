@@ -25,8 +25,49 @@
     culpa qui officia deserunt mollit anim id est laborum.
 </p>
 
+<div class="d-flex w-100 justify-content-around mt-4">
+
+    <button id="btn1">Button 1</button>
+    <button id="btn2">Button 2</button>
+    <button id="btn3">Button 3</button>
+    <button id="btn4">Button 4</button>
+
+</div>
+
 <script>
+
+
+
     (function() {
+        var button1 = document.getElementById("btn1");
+        var button2 = document.getElementById("btn2");
+        var button3 = document.getElementById("btn3");
+        var button4 = document.getElementById("btn4");
+
+
+        var listener = function (event) {
+            mainHeader.innerHTML = "JavaSCRAPT is Gucci!"
+        }
+        document.getElementById("btn1").addEventListener("click", listener);
+
+        var listener = function (event) {
+            subHeader.style.color = "blue"
+        }
+        document.getElementById("btn2").addEventListener("click", listener);
+
+        var listener = function (event) {
+            for (var i = 0; i <= listItems.length; i++){
+                if (i % 2 !== 0)
+                    listItems[i].style.color = "grey";
+            }        }
+        document.getElementById("btn3").addEventListener("click", listener);
+
+        var listener = function (event) {
+            subParagraphs[0].innerText = "MISHUN ACKOMPLISHED";
+        }
+        document.getElementById("btn4").addEventListener("click", listener);
+
+
         "use strict";
         // TODO: Uncomment next line and get the main header element by id
         var mainHeader = document.getElementById("main-header");
@@ -34,10 +75,10 @@
         console.log(mainHeader)
 
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-        var mainHeader = document.getElementById("main-header");
+        document.getElementById("main-header");
         console.log(mainHeader);
 
-        mainHeader.innerHTML = "JavaSCRAPT is Gucci!"
+        // mainHeader.innerHTML = "JavaSCRAPT is Gucci!"
 
         // TODO: Uncomment the next line and get the sub header element by id
         var subHeader = document.getElementById("sub-header");
@@ -45,38 +86,59 @@
         console.log(subHeader);
 
         // TODO: Set the text color of subHeader to blue
-        subHeader.style.color = "blue"
+        // subHeader.style.color = "blue"
 
         // TODO: Uncomment the next line and get all list items
         var listItems = document.getElementsByTagName("li");
         console.log(listItems);
 
         // TODO: Set text color on every other list item to grey
-        // var listItems = document.getElementsByClassName('even');
-        // console.log(listItems[0]);
-        //
-        //
-        // for (var i=0; i < listItems.length; i++){
-        //     console.log(listItems[i]);
-        // }
-        listItems.style.color = "red"
 
-        //
-        // for (var i = 0; i < evenElements.length; i++) {
-        //     console.log(evenElements[i]);
-        // }
+            // for (var i = 0; i <= listItems.length; i++){
+            //     if (i % 2 !== 0)
+            //         listItems[i].style.color = "grey";
+            // }
 
-        // Prints:
-        // li.even.list-one-item
-        // li.even.list-two-item
+            // for (var i = 0; i < listItems.length; i+=2){
+            //         listItems[i].style.color = "grey";
+            // }
+
+
+
+
         // TODO: Set text color of li with dbid = 1 to blue
-        //     .style.color = "blue"
+        // var dbid = listItems.getAttribute('data-dbid');
+        // for (var i = 0; i < dbid.length; i++) {
+        //     //     console.log(dbId);
+        //     // dbid["0"].style.color = "blue";
+        //
+        //             listItems[i].style.color = "blue";
+        // }
+
+        // var dbid = listItems.getAttribute('data-dbid');
+        for (var i = 0; i < listItems.length; i++){
+            if (listItems[i].getAttribute("'data-dbid' === '1'")){
+                return (listItems[i].style['color'] = "blue");
+            }
+            // listItems[i].style.color = "blue"
+        }
+
+        //USE A FOR LOOP OR MAYBE EVEN FOR EACH LOOP
 
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
-        // var subParagraphs = ;
+        var subParagraphs = document.getElementsByClassName("sub-paragraph");
+        console.log(subParagraphs);
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
+        // subParagraphs[0].innerText = "MISHUN ACKOMPLISHED";
+        console.log(subParagraphs)
+
     })();
+
+
 </script>
+
+
+
 </body>
 </html>
