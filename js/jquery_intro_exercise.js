@@ -38,6 +38,31 @@
 
 
 
+$('#ding').click(
+    function (){
+        $(this).css('background-color', 'green');
+    }
+)
+
+$('p').dblclick(
+    function (){
+        $(this).css('font-size', '18px');
+    }
+)
+
+
+// $('li').hover( handlerIn, handlerOut )
+
+$('li').hover(
+    function(){
+        $(this).css('color', 'red');
+    },
+    function(){
+        $(this).css('color', 'black');
+    }
+);
+
+
 // EXTRA STUFF SHOWN BY DORIAN
 // $('.greet').css('background-color', "orange").css("margin", '2px').html('<strong>Adieu</strong>') this is how deep you can gets.
 
