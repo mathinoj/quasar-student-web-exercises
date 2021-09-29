@@ -33,25 +33,35 @@
 // });
 
 // MULTIPLE SELECTORS EXERCISE
+// YOU DID THIS IN THE STUFF ABOVE
 
 
 
-
-
+//MOUSE OVER EVENTS EXERCISES
 $('#ding').click(
     function (){
         $(this).css('background-color', 'green');
     }
 )
+// OR YOU CAN WRITE LIKE THIS, SEE BELOW!!!!!!
+// $('#ding').click(function (){
+//     $(this).css('background-color', 'green');
+// })
+
+
+
+// $('p').dblclick(
+//     function (){
+//         $(this).css('font-size', '18px');
+//     }
+// );
 
 $('p').dblclick(
     function (){
-        $(this).css('font-size', '18px');
+        $(this).css('font-size', '18px').css('font-family', 'Creepster', 'cursive');
     }
-)
+);
 
-
-// $('li').hover( handlerIn, handlerOut )
 
 $('li').hover(
     function(){
@@ -62,8 +72,42 @@ $('li').hover(
     }
 );
 
+$('#green').hover(
+    function(){
+        $(this).css('color', 'green');
+    },
+    function(){
+        $(this).css('color', 'red');
+    }
+);
+
+$('h2').hover(
+    function(){
+        $(this).css('color', 'red').css('font-family', 'Creepster', 'cursive').css('font-size', '90px');
+    },
+    function(){
+        $(this).css('color', 'white').css('font-size', '2px');
+    }
+);
+
+// h1.hidden {
+//     display: none;
+// }
+
+
+// font-family: 'Creepster', cursive;
 
 // EXTRA STUFF SHOWN BY DORIAN
 // $('.greet').css('background-color', "orange").css("margin", '2px').html('<strong>Adieu</strong>') this is how deep you can gets.
 
 // $('*').css('border', '1px solid red').css('padding', '5px').css('margin', '5px'); this is the ALL SELECTOR
+
+// var button1 = $('btn1');
+//
+// button1.click(function (e){
+//     alert('button 1 is clicked')
+//     $('p').css("background-color" , "rebeccapurple")
+// })
+// THIS VAR/FUNCTION ALERTS WHEN BUTTON IS CLICKED AND CHANGES A PARAGRAPH TO PURPLE. BASICALLY TWO ACTIONS IN ONE
+
+
