@@ -20,29 +20,48 @@
         if (detonationTimer == 0) {
             alert('EXTERMINATE!');
             document.body.innerHTML = '';
-        } else if (detonationTimer > 0) {
-            document.getElementById('timer').innerHTML = detonationTimer;
-        }
-        console.log('hello')
-        detonationTimer--;
-    }
-    window.setTimeout(updateTimer, 1000);
-    let display = setInterval(updateTimer, 1000);
-HAVE TO CREATE INTERVALID
-var intervalId = setInterval();
+            } else if (detonationTimer > 0) {
+                document.getElementById('timer').innerHTML = detonationTimer;
+            }
+            detonationTimer--;
+        } //HERE UP TO "var detonationTimer" was provided by HTML
 
+// DIFFERENCE BETWEEN SET-INTERVAL AND SET-TIMEOUT
+    //  var intervalID = setInterval(alert, 1000); // Will alert every second.
+            //  clearInterval(intervalID); // Will clear the timer.
+    // setTimeout(alert, 1000); // Will alert once, after a second.
+
+    // var intervalId = setInterval(function () {
+    //     if (count >= max) {
+    //         clearInterval(intervalId);
+    //         console.log('All done');
+    //     } else {
+    //         count++;
+    //         console.log('Repeating this line ' + count);
+    //     }
+ // WE MODEL OUR "VAR INTERVAL" AFTER THE ONE ABOVE, WHICH SETS THE VAR W/ THE setINTERVAL. Then we have to insert two arguments just like the one above does an if/else arguement. However we insert a callback (updateTimer) and the time setting, JUST LIKE THE DIRECTIONS SAY TO DO.
+
+    var intervalId = setInterval(updateTimer, 1000);
+
+    // You can set the variable interval ID to anything. Just make sure to use that same variable interval ID when clearing the interval.
 
     // TODO: When this function runs, it needs to
     // cancel the interval/timeout for updateTimer()
+    // function defuseTheBOM(){
+    //  THIS WAS THE GIVE FUNCTION TO WORK WITH
+    // }
+
+
     function defuseTheBOM() {
-        // clearTimeout(detonationTimer)
-        console.log('defuse');
+        clearInterval(intervalId);
     }
-var stopBOM = setTimeout(updateTimer, 1000)
-    clearTimeout(stopBOM);
 
 
-    var timeoutId = setTimeout(function () {});
+// to cancel the timeout, you can call
+// clearTimeout(timeoutId);
+// prior to the delay expiring
+
+
 
     // Don't modify anything below this line!
     //
@@ -55,3 +74,9 @@ var stopBOM = setTimeout(updateTimer, 1000)
 </script>
 </body>
 </html>
+
+
+
+
+
+
