@@ -38,11 +38,11 @@
 
 
 //MOUSE OVER EVENTS EXERCISES
-$('#ding').click(
-    function (){
-        $(this).css('background-color', 'green');
-    }
-)
+// $('#ding').click(
+//     function (){
+//         $(this).css('background-color', 'green');
+//     }
+// )
 // OR YOU CAN WRITE LIKE THIS, SEE BELOW!!!!!!
 // $('#ding').click(function (){
 //     $(this).css('background-color', 'green');
@@ -56,39 +56,39 @@ $('#ding').click(
 //     }
 // );
 
-$('p').dblclick(
-    function (){
-        $(this).css('font-size', '18px').css('font-family', 'Creepster', 'cursive');
-    }
-);
-
-
-$('li').hover(
-    function(){
-        $(this).css('color', 'red');
-    },
-    function(){
-        $(this).css('color', 'black');
-    }
-);
-
-$('#green').hover(
-    function(){
-        $(this).css('color', 'green');
-    },
-    function(){
-        $(this).css('color', 'red');
-    }
-);
-
-$('h2').hover(
-    function(){
-        $(this).css('color', 'red').css('font-family', 'Creepster', 'cursive').css('font-size', '90px');
-    },
-    function(){
-        $(this).css('color', 'white').css('font-size', '2px');
-    }
-);
+// $('p').dblclick(
+//     function (){
+//         $(this).css('font-size', '18px').css('font-family', 'Creepster', 'cursive');
+//     }
+// );
+//
+//
+// $('li').hover(
+//     function(){
+//         $(this).css('color', 'red');
+//     },
+//     function(){
+//         $(this).css('color', 'black');
+//     }
+// );
+//
+// $('#green').hover(
+//     function(){
+//         $(this).css('color', 'green');
+//     },
+//     function(){
+//         $(this).css('color', 'red');
+//     }
+// );
+//
+// $('h2').hover(
+//     function(){
+//         $(this).css('color', 'red').css('font-family', 'Creepster', 'cursive').css('font-size', '90px');
+//     },
+//     function(){
+//         $(this).css('color', 'white').css('font-size', '2px');
+//     }
+// );
 
 // h1.hidden {
 //     display: none;
@@ -111,3 +111,37 @@ $('h2').hover(
 // THIS VAR/FUNCTION ALERTS WHEN BUTTON IS CLICKED AND CHANGES A PARAGRAPH TO PURPLE. BASICALLY TWO ACTIONS IN ONE
 
 
+//KEYDOWN - Keeps tracking the key that is being pushed down. If user holds down "a" then it'll track "aaaaaaaaaaa" until released.
+// $('body').keydown(function(event){
+//     console.log(event.key);
+// })
+
+//to see this in the console go to
+
+//KEYPRESS
+// $("body").keypress(function(event){
+//     console.log(event.key);
+// })
+
+//KEYUP - when key is released the event will register. Unlike keydown this will track the "a" after it's let off.
+$("body").keyup(function(event){
+    console.log(event.key);
+})
+
+
+
+
+
+
+// $("body").keyup(function(event){
+//     console.log("They key you pressed was: " +event.key);
+//     myKeys += event.key;
+//     console.log(myKeys);
+//     if(myKeys === "quasar"){
+//         alert('you entered the magic word')
+//     }
+// })
+// var myKeys = ""
+
+//above is a global variable for the function above it
+// global variable: myKeys = myKeys + event.key; or myKeys += event.key;
