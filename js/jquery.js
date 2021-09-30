@@ -1,19 +1,22 @@
 'use strict';
 
-// $('body').keyup(function(event){
-//     console.log('This key was pressed: ' +event.key);
-//     myKeys += event.key.toUpperCase();
-//     console.log(myKeys)
-//     if(myKeys === 'ARROWUP' + 'ARROWUP' + 'ARROWDOWN' + 'ARROWDOWN' + 'ARROWLEFT' + 'ARROWRIGHT' + 'ARROWLEFT' + 'ARROWRIGHT' + 'B' + 'A' + "ENTER"){
-//     // if(myKeys === 'arrowup' + 'arrowup' + 'arrowdown' + 'arrowdown' + 'arrowleft' + 'arrowright' + 'arrowleft' + 'arrowright' + 'b' + 'a' + 'enter'){ IF YOU DO IT LIKE THIS THEN YOU HAVE TO CHANGE "toLowerCase()"
-//
-//         alert('You win 30 lives!')
-//     }
-// })
-// var myKeys="";
+
+// peeps used var thirtyLives = ArrowUpArrowUpArrowDownArrowDownArrowLeftArrowRightArrowLeftArrowRightbaEnter'
+
+$('body').keyup(function(event){
+    console.log('This key was pressed: ' +event.key);
+    myKeys += event.key.toUpperCase();
+    console.log(myKeys)
+    if(myKeys === 'ARROWUP' + 'ARROWUP' + 'ARROWDOWN' + 'ARROWDOWN' + 'ARROWLEFT' + 'ARROWRIGHT' + 'ARROWLEFT' + 'ARROWRIGHT' + 'B' + 'A' + "ENTER"){
+    // if(myKeys === 'arrowup' + 'arrowup' + 'arrowdown' + 'arrowdown' + 'arrowleft' + 'arrowright' + 'arrowleft' + 'arrowright' + 'b' + 'a' + 'enter'){ IF YOU DO IT LIKE THIS THEN YOU HAVE TO CHANGE "toLowerCase()"
+
+        alert('You win 30 lives!')
+    }
+})
+var myKeys="";
 
 
-$('#audio').keypress(function(event){
+$('body').keypress(function(event){
     console.log('This key was pressed: ' +event.key);
     music += event.key.toLowerCase();
     console.log(music)
@@ -25,14 +28,14 @@ $('#audio').keypress(function(event){
 var music=''
 
 
-$('h2').hover(
-    function(){
-        $(this).css('color', 'red').css('font-family', 'Metal Mania', 'cursive').css('font-size', '90px');
-    },
-    function(){
-        $(this).css('color', 'white').css('font-size', '2px');
-    }
-);
+// $('h2').hover(
+//     function(){
+//         $(this).css('color', 'red').css('font-family', 'Metal Mania', 'cursive').css('font-size', '90px');
+//     },
+//     function(){
+//         $(this).css('color', 'white').css('font-size', '2px');
+//     }
+// );
 
 
 // document.addEventListener('keydown', function(e) {
