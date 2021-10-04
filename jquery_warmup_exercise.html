@@ -31,12 +31,18 @@
 
 
 <script>
-    var button1 = $('.para');
+// THIS IS FOR A JQUERY MORNING EXERCISE ON 10/4
+    var para1 = $('.para');
 
-    button1.click(function (e) {
-        alert('Lorem paragraph is clicked')
-        // $('p').css("background-color", "rebeccapurple")
+    para1.click(function (e) {
+        // alert('Lorem paragraph is clicked')
+            alert($(this).text())
     })
+
+//     or THE BETTER WAY...
+// $("p").click(function (e){
+//     alert($(this).text())
+// })
 </script>
 
 <!--<script src="/js/jquery_intro_exercise.js"></script>-->
