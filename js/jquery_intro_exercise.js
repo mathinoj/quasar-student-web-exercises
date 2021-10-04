@@ -124,13 +124,18 @@
 // })
 
 //KEYUP - when key is released the event will register. Unlike keydown this will track the "a" after it's let off.
-$("body").keyup(function(event){
-    console.log(event.key);
+// $("body").keyup(function(event){
+//     console.log(event.key);
+// })
+
+
+
+var button1 = $('.para');
+
+button1.click(function (e) {
+    alert('Lorem paragraph is clicked')
+    // $('p').css("background-color", "rebeccapurple")
 })
-
-
-
-
 
 
 // $("body").keyup(function(event){
