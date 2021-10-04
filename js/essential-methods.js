@@ -1,28 +1,36 @@
-// Update the page with jQuery to add a link that toggles the class invisible on and off for all dd elements.
-
 "use strict";
-    $('.invisible').click(function() {
-        $(this).css('visibility', 'hidden');
-    });
+//     $('.invisible').click(function() {
+//         $(this).css('visibility', 'hidden');
+//     });
+//
+//
+// $('document').ready(function() {
+//     $('#hide').click(function(event) {
+//         event.preventDefault();
+//         console.log('d');
+//         $('dd').toggleClass('invisible');
+//     });
+// });
 
-// $(document).ready(function (){
-//     $('.submit').click(function(){
-//         $('.invisible').css('visibility', 'hidden');
-//         $('.invisible:visible').css('visibility', 'visible');
-//         })
-//     })
+// Create a button that, when clicked, makes the last li in each ul have a yellow background.
+
+// $('document').ready(function() {
+//     $('#submit').click(function(event) {
+//         event.preventDefault();
+//         console.log('d');
+//         $('li').toggleClass('li', "background-color", "red" );
+//         // $( "li" ).last().css.toggleClass( "li", "background-color", "red" );
+//     });
+// });
 
 $('document').ready(function() {
-    $('#hide').click(function(event) {
+    $('#submit').click(function(event) {
         event.preventDefault();
         console.log('d');
-        $('dd').toggleClass('invisible');
+        $('#national, #local, #state').last().children().addClass( 'highlight' );
+        // $( "li" ).last().css.toggleClass( "li", "background-color", "red" );
     });
 });
 
-// $('document').ready(function() {
-//     $('#highlight-important').click(function(event) {
-//         event.preventDefault();
-//         $('.important').addClass('highlighted');
-//     });
-// });
+// $( "ul li" ).last().addClass( "highlight" );
+
