@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div class="para">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi eveniet exercitationem fugit minima nobis
+        nulla quaerat quos. Porro, rem totam.</p>
+</div>
+
+
+<!--<script>-->
+<!--    // $('#para').click(function () {-->
+<!--    //     $(this).alert("blah");-->
+<!--    // })-->
+
+<!--    var button1 = $('.para');-->
+
+<!--    button1.click(function (e) {-->
+<!--        alert('button 1 is clicked')-->
+<!--        // $('p').css("background-color", "rebeccapurple")-->
+<!--    })-->
+<!--</script>-->
+
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+        crossorigin="anonymous">
+</script>
+
+
+<script>
+// THIS IS FOR A JQUERY MORNING EXERCISE ON 10/4
+    var para1 = $('.para');
+
+    para1.click(function (e) {
+        // alert('Lorem paragraph is clicked')
+            alert($(this).text())
+    })
+
+//     or THE BETTER WAY...
+// $("p").click(function (e){
+//     alert($(this).text())
+// })
+</script>
+
+<!--<script src="/js/jquery_intro_exercise.js"></script>-->
+</body>
+</html>
