@@ -183,12 +183,68 @@
 //     }
 // }
 
-function logNum (num){
-    for (var i = 1; i <= num; i++) {
-        if (i % 2 !== 0){
-            console.log(+i + " is an odd number.");
-        } else {
-            console.log(+i + " is an even number.")
+// function logNum (num){
+//     for (var i = 1; i <= num; i++) {
+//         if (i % 2 !== 0){
+//             console.log(+i + " is an odd number.");
+//         } else {
+//             console.log(+i + " is an even number.")
+//         }
+//     }
+// }
+
+// Get Sum of People's Budget
+// Create the function named getBudgets that takes an array with objects and returns the sum of people's budgets.
+
+// Examples
+// getBudgets([
+//     {name: "John", age: 21, budget: 23000},
+//     {name: "Steve", age: 32, budget: 40000},
+//     {name: "Martin", age: 16, budget: 2700}
+// ])
+//65700
+// getBudgets([
+//     {name: "John", age: 21, budget: 29000},
+//     {name: "Steve", age: 32, budget: 32000},
+//     {name: "Martin", age: 16, budget: 1600}
+// ])
+//62600
+
+
+
+function gotBudgets(arr){
+    var array = [
+        {name: "John", age: 21, budget: 23000},
+        {name: "Steve", age: 32, budget: 40000},
+        {name: "Martin", age: 16, budget: 2700}
+    ]
+    // var sum = array.reduce(function(a, b){
+    //     return a + b;
+    //     console.log(sum);
+    // }, 0);
+    for (var i=0; i < array.length; i++){
+        console.log(d);
+        if(array[i].includes('budget')){
+            return alert("Your total is " +array.budget);
+            // console.log(gotBudgets())
         }
     }
 }
+
+
+// console.log(gotBudgets(arr))
+
+// var sum = array.reduce(function(a, b){
+//     return a + b;
+// }, 0);
+//
+// for (var i = 0; i < kensCatch.length; i++) {
+//         if (kensCatch[i].includes("red" || "blue")){
+//             // return alert("You caught " +kensCatch
+//             return true
+//         } else if ((kensCatch[i].includes("red" && "blue"))) {
+//             return alert("Now you got " +kensCatch)
+//         } else {
+//             return false;
+//         }
+//     }
