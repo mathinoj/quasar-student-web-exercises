@@ -26,27 +26,34 @@ $.get('http://api.openweathermap.org/data/2.5/forecast', {
     APPID: openWeatherKey,
     q: 'San Antonio, US',
     units: 'imperial',
-}).done(function(data){
+})
 
-    console.log(data);
+    .done(function (data) {
+        console.log(data);
         var typesHTML = getWeather(data.list[5])
         console.log(data.list[i])
         console.log(typesHTML);
-        $('.card-text').append(typesHTML);
+        // $('.card-text').append(typesHTML);
 
-    for (var i=5; i < data.list.length; i+=8) {
-            if(i+8 !== 32){
-                break;
-            }
-    }
-})
+        var fiveDayWeathers = [];
+        for (var i = 5; i < data.list.length; i += 8) {
+            console.log(data.list[i])
+            fiveDayWeathers.push(data.list[i])
+        }
+
+
+        for (var i = 0; i < fiveDayWeathers.length; i++) {
+            var oneDayWeather = getWeather(fiveDayWeathers[i])
+            $('.card-text').eq(i).append(oneDayWeather)
+        }
+
+    })
 
 // for (let i = 0; i < a.length; i++) {
 //     if (a[i] === theValue) {
 //         break;
 //     }
 // }
-
 
 
 //         $.ajax("data/blog.json", {
