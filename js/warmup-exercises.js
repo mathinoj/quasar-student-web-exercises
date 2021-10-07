@@ -211,26 +211,105 @@
 //62600
 
 
+// function gotBudgets(arr){
+//     var arrayBud = [
+//         {name: "John", age: 21, budget: 23000},
+//         {name: "Steve", age: 32, budget: 40000},
+//         {name: "Martin", age: 16, budget: 2700}
+//     ]
+// var total = 0
+// var what = arrayBud.indexOf()
+// console.log(what);
+// //
+// // console.log(arrayBud);
+// // console.log(arrayBud.length);
+//
+// arrayBud.forEach(function (budgets){
+//     for (var i=2; i < arrayBud.length; i++){
+//         console.log(arrayBud);
+//         alert('The budget is: ' + (total+=budgets));
+//         }
+// })
+// marks.forEach(function(element, index){
+//     total+=element;
+// });
 
-function gotBudgets(arr){
-    var array = [
-        {name: "John", age: 21, budget: 23000},
-        {name: "Steve", age: 32, budget: 40000},
-        {name: "Martin", age: 16, budget: 2700}
-    ]
-    // var sum = array.reduce(function(a, b){
-    //     return a + b;
-    //     console.log(sum);
-    // }, 0);
-    for (var i=0; i < array.length; i++){
-        console.log(d);
-        if(array[i].includes('budget')){
-            return alert("Your total is " +array.budget);
-            // console.log(gotBudgets())
-        }
-    }
-}
+//     var shoppers = [
+//         {name: 'Cameron', amount: 180},
+//         {name: 'Ryan', amount: 250},
+//         {name: 'George', amount: 320}
+//     ];
+//
+// shoppers.forEach(function (shopper) {
+//     //console.log(shopper.name+ " spent $" +shopper.amount)
+//     //var qualify = (shopper.amount > 200)
+//     var discount = (shopper.amount * .12)
+//     if (shopper.amount > 200) {
+//         console.log(shopper.name + " qualifies for a discount.")
+//     } else {
+//         console.log(shopper.name + "'s current amount is $" + shopper.amount + ". " + shopper.name + " does not qualify for a discount.")
+//         console.log("If " + shopper.name + " spends $" + (201 - shopper.amount) + " more, the shopper will receive a 12% discount.")
+//     }
+//     if (shopper.amount > 200) {
+//         console.log(shopper.name + "'s current amount is: $" + shopper.amount + ". Their new amount is: $" + (shopper.amount - discount))
+//     }
+// })
 
+
+
+
+
+
+
+// var index = arrayBud.indexOf('budget');
+// console.log(index);
+
+// var index = arrayBud.indexOf('budget');
+// console.log(index);
+// console.log(arrayBud[0])
+// console.log(arrayBud[1])
+// console.log(arrayBud[2])
+
+
+
+// console.log(arrayBud[arrayBud.length - 1])
+
+    // for (var i=0; i < arrayBud.length; i++){
+    //     console.log(arrayBud);
+    //     alert('The shape at index ' + i + ' is: ' + array[i]);
+    //     if(array[i].includes('budget')){
+    //         alert("Your total is " +array.budget);
+    //         console.log(budget);
+    //     }
+    // }
+    // var sum = null;
+    //
+    // array.forEach(function(value){
+    //     console.log(sum += value.budget);
+    // });
+// }
+// console.log(gotBudgets)
+
+// function tacoTuesday (input){
+//     const includesTaco = array.includes("taco");
+//
+//     // var input = ["taco"];
+//     // if (input === ["taco"]){
+//     if (input === includesTaco){
+//         return true;
+//     }
+//     console.log(tacoTuesday());
+// }
+// tacoTuesday();
+
+// function tacoTuesday (arr){
+//     for(var i = 0; i < arr.length; i++){
+//         if(arr[i].includes("taco")){
+//             return true;
+//         }
+//     }
+//     return false;
+// }
 
 // console.log(gotBudgets(arr))
 
@@ -248,3 +327,86 @@ function gotBudgets(arr){
 //             return false;
 //         }
 //     }
+
+// Find the Smallest and Biggest Numbers
+//  Create a function named minMax that takes an array of numbers and return both the minimum and maximum numbers, in that order.
+//
+//  Examples
+//   minMax([1, 2, 3, 4, 5]) ➞ [1, 5]
+//   minMax([2334454, 5]) ➞ [5, 2334454]
+//   minMax([1]) ➞ [1, 1]
+//
+//  Notes All test arrays will have at least one element and are valid
+
+
+
+
+// function big(){
+//     var firstNums = ([1, 2, 3, 4, 5])
+//
+//     Math.max(firstNums);
+//     console.log(max);
+// }
+
+// var largest = firstNums[0];
+
+// function minMax(arr) {
+
+// for (var i = 0; i < firstNums.length; i++) {
+//     if (largest < firstNums[i]) {
+//         largest = firstNums[i];
+//     }
+// }
+// // }
+// console.log(largest);
+
+// var array = [3 , 6, 2, 56, 32, 5, 89, 32];
+// var largest= 0;
+//
+// for (i=0; i<=largest;i++){
+//     if (array>largest) {
+//         var largest=array[i];
+//     }
+// }
+//
+// console.log(largest)
+
+// firstNums.forEach(function (nums){
+//     for (var i=0; i < firstNums.length; i++) {
+//         console.log(firstNums);
+//         if (largest < firstNums[i]) {
+//             largest = firstNums[i];
+//             alert('The budget is: ' +nums);
+//         }
+//     }
+// })
+
+var sale = ([
+    {name: 'Jim Halpert', sales: 100},
+    {name: 'Dwight Schrute', sales: 50},
+    {name: 'Andy Bernard', sales: 150},
+])
+
+function averageSales(arr){
+    // var num = sale.sales.length;
+    var num = 0;
+    sale.forEach(function (some){
+        num += some
+    })
+        // return (num += sale.length)
+        console.log(arr)
+        console.log(averageSales)
+
+    return (num/arr.length)
+    // arr.forEach(function (value){
+    // return (num /= value.sales)
+
+}
+
+// function average(arr){
+//     var num = 0;
+//     arr.forEach(function (blah){
+//         num += blah
+//     });
+//     return (num/arr.length);
+// }
