@@ -381,27 +381,27 @@
 //     }
 // })
 
-var sale = ([
-    {name: 'Jim Halpert', sales: 100},
-    {name: 'Dwight Schrute', sales: 50},
-    {name: 'Andy Bernard', sales: 150},
-])
-
-function averageSales(arr){
-    // var num = sale.sales.length;
-    var num = 0;
-    sale.forEach(function (some){
-        num += some
-    })
-        // return (num += sale.length)
-        console.log(arr)
-        console.log(averageSales)
-
-    return (num/arr.length)
+// var sale = ([
+//     {name: 'Jim Halpert', sales: 100},
+//     {name: 'Dwight Schrute', sales: 50},
+//     {name: 'Andy Bernard', sales: 150},
+// ])
+//
+// function averageSales(arr){
+//     // var num = sale.sales.length;
+//     var num = 0;
+//     sale.forEach(function (some){
+//         num += some
+//     })
+//         // return (num += sale.length)
+//         console.log(arr)
+//         console.log(averageSales)
+//
+//     return (num/arr.length)
     // arr.forEach(function (value){
     // return (num /= value.sales)
 
-}
+// }
 
 // function average(arr){
 //     var num = 0;
@@ -410,3 +410,30 @@ function averageSales(arr){
 //     });
 //     return (num/arr.length);
 // }
+
+
+
+// DT UNIX TO STRING, CONVERTS SECONDS TO A DATE
+// var date = new Date(1618317040).toLocaleDateString("en-US")
+// console.log(date)
+
+var date = new Date(1618317040)
+console.log(date)
+
+// Date objects are created with the new Date() constructor. There are 4 ways to create a new date object:
+//     new Date()
+//     new Date(year, month, day, hours, minutes, seconds, milliseconds)
+//     new Date(milliseconds)
+//     new Date(date string)
+// toLocaleString - Converts a Date object to a string, using locale conventions
+// toDateString - Converts the date portion of a Date object into a readable string
+// https://timestamp.online/article/how-to-convert-timestamp-to-datetime-in-javascript
+// https://www.w3schools.com/js/js_dates.asp
+// https://coderrocketfuel.com/article/convert-a-unix-timestamp-to-a-date-in-vanilla-javascript THIS USES BASIC JS, SEE BELOW
+
+var thisMorning = 1633702800;
+function convert(dtNum){
+    var dtMilliSecs = dtNum * 1000 //seconds * 1000 = our milliseconds
+    var dateObj = new Date(dtMilliSecs); //pass in milliseconds to Date(constructor)
+    return dateObj.toLocaleString();
+}
