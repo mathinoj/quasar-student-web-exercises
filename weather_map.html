@@ -9,13 +9,7 @@
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
 
-    <style>
-        #map {
-            width: 500px;
-            height: 500px;
-            margin: auto;
-        }
-    </style>
+    <link rel="stylesheet" href="css/weather-map-style.css">
 </head>
 <body>
 <!--TOP NAV BAR-->
@@ -40,9 +34,9 @@
 <div class="card-deck">
 <!--CARD ONE    -->
     <div class="card">
-        <img class="card-img-top" src="..." alt="Card image cap">
+        <img class="card-img-top" src="img/day_1_2.png" alt="Card image cap">
         <div class="card-body">
-            <h5 class="card-title">Card title</h5>
+<!--            <h5 class="card-title">Card title</h5>-->
             <p class="card-text"></p>
         </div>
             <ul class="list-group list-group-flush">
@@ -54,15 +48,15 @@
 <!--                <a href="#" class="card-link">Card link</a>-->
 <!--                <a href="#" class="card-link">Another link</a>-->
 <!--            </div>-->
-        <div class="card-footer">
-            <small class="text-muted">Last updated 3 mins ago</small>
-        </div>
+<!--        <div class="card-footer">-->
+<!--            <small class="text-muted">Last updated 3 mins ago</small>-->
+<!--        </div>-->
     </div>
 <!--CARD TWO-->
     <div class="card">
-        <img class="card-img-top" src="..." alt="Card image cap">
+        <img class="card-img-top" src="img/day_1_2.png" alt="Card image cap">
         <div class="card-body">
-            <h5 class="card-title">Card title</h5>
+<!--            <h5 class="card-title">Card title</h5>-->
             <p class="card-text"></p>
         </div>
         <ul class="list-group list-group-flush">
@@ -74,15 +68,15 @@
 <!--            <a href="#" class="card-link">Card link</a>-->
 <!--            <a href="#" class="card-link">Another link</a>-->
 <!--        </div>-->
-        <div class="card-footer">
-            <small class="text-muted">Last updated 3 mins ago</small>
-        </div>
+<!--        <div class="card-footer">-->
+<!--            <small class="text-muted">Last updated 3 mins ago</small>-->
+<!--        </div>-->
     </div>
 <!--CARD THREE-->
     <div class="card">
-        <img class="card-img-top" src="..." alt="Card image cap">
+        <img class="card-img-top" src="img/day_3.png" alt="Card image cap">
         <div class="card-body">
-            <h5 class="card-title">Card title</h5>
+<!--            <h5 class="card-title">Card title</h5>-->
             <p class="card-text"></p>
         </div>
         <ul class="list-group list-group-flush">
@@ -94,15 +88,15 @@
 <!--            <a href="#" class="card-link">Card link</a>-->
 <!--            <a href="#" class="card-link">Another link</a>-->
 <!--        </div>-->
-        <div class="card-footer">
-            <small class="text-muted">Last updated 3 mins ago</small>
-        </div>
+<!--        <div class="card-footer">-->
+<!--            <small class="text-muted">Last updated 3 mins ago</small>-->
+<!--        </div>-->
     </div>
 <!--CARD FOUR-->
     <div class="card">
-        <img class="card-img-top" src="..." alt="Card image cap">
+        <img class="card-img-top" src="img/day_4.png" alt="Card image cap">
         <div class="card-body">
-            <h5 class="card-title">Card title</h5>
+<!--            <h5 class="card-title">Card title</h5>-->
             <p class="card-text"></p>
         </div>
         <ul class="list-group list-group-flush">
@@ -114,15 +108,15 @@
 <!--            <a href="#" class="card-link">Card link</a>-->
 <!--            <a href="#" class="card-link">Another link</a>-->
 <!--        </div>-->
-        <div class="card-footer">
-            <small class="text-muted">Last updated 3 mins ago</small>
-        </div>
+<!--        <div class="card-footer">-->
+<!--            <small class="text-muted">Last updated 3 mins ago</small>-->
+<!--        </div>-->
     </div>
 <!--CARD FIVE-->
     <div class="card">
-        <img class="card-img-top" src="..." alt="Card image cap">
+        <img class="card-img-top" src="img/day_5.png" alt="Card image cap">
         <div class="card-body">
-            <h5 class="card-title">Card title</h5>
+<!--            <h5 class="card-title">Card title</h5>-->
             <p class="card-text"></p>
         </div>
         <ul class="list-group list-group-flush">
@@ -134,14 +128,18 @@
 <!--            <a href="#" class="card-link">Card link</a>-->
 <!--            <a href="#" class="card-link">Another link</a>-->
 <!--        </div>-->
-        <div class="card-footer">
-            <small class="text-muted">Last updated 3 mins ago</small>
-        </div>
+<!--        <div class="card-footer">-->
+<!--            <small class="text-muted">Last updated 3 mins ago</small>-->
+<!--        </div>-->
     </div>
 </div>
 
 <br>
-<div id="map"></div>
+<div id="map" ></div>
+<pre id="coordinates" class="coordinates"></pre>
+
+
+<!--style="margin: 0 auto; width:855px;-->
 
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
         crossorigin="anonymous"></script>
