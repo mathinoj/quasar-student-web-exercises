@@ -15,7 +15,7 @@ function getWeather(weather) {
     html += '<h2>' + weather.dt_txt + '</h2>';
     // html += '<h2>' + weather.dt.toLocaleDateString("en-US") + '</h2>';
     html += '<h2>' + 'Temp: ' + weather.main.temp + '</h2>';
-    html += '<h3>' + 'Humidity: ' + weather.main.humidity + '</h3>';
+    html += '<h4>' + 'Humidity: ' + weather.main.humidity + '</h4>';
     html += '<h4>' + 'Wind Speed: ' + weather.wind.speed + '</h4>'
     // html += '<h6>' + weather.main.pressure + '</h6>'
     // html += '<ul>' + wind.categories.join(', ') + '</ul>'
@@ -83,7 +83,7 @@ console.log(firstMapboxLectureKey);
 mapboxgl.accessToken = firstMapboxLectureKey;
 console.log(firstMapboxLectureKey);
 
-var coordinates = document.getElementById('coordinates');
+// var coordinates = document.getElementById('coordinates');
 var map = new mapboxgl.Map(
     {
         container: 'map',
@@ -92,17 +92,8 @@ var map = new mapboxgl.Map(
         center: [-98.55791153784084, 29.488381434651984],
         // minZoom: 5,
         // maxZoom: 20,
-        zoom: 17,
+        zoom: 5,
     });
-
-// mapboxgl.accessToken = 'pk.eyJ1IjoibWF0aGlub2oiLCJhIjoiY2t1Y3p4aXk5MTV0MTJvbzgxc3d4OGxpciJ9.wg0dcZMC8hFLArQLFsoT7A';
-// const coordinates = document.getElementById('coordinates');
-// const map = new mapboxgl.Map({
-//     container: 'map',
-//     style: 'mapbox://styles/mapbox/streets-v11',
-//     center: [0, 0],
-//     zoom: 2
-// });
 
 var marker = new mapboxgl.Marker({
     draggable: true
@@ -112,15 +103,36 @@ var marker = new mapboxgl.Marker({
 
 function onDragEnd() {
     var lngLat = marker.getLngLat();
-    coordinates.style.display = 'block';
-    coordinates.innerHTML = `Longitude: ${lngLat.lng}<br />Latitude: ${lngLat.lat}`;
-}
+    console.log(lngLat);
 
+    reverseGeocode(lngLat, firstMapboxLectureKey).then(function(address) {
+        console.log(address);
+        var addressArr = address.split(', ')
+        console.log(addressArr)
+        console.log(addressArr[1]);
+        $.get('http://api.openweathermap.org/data/2.5/forecast', {
+            APPID: openWeatherKey,
+            q: addressArr[1],
+            units: 'imperial',
+        }).done(function (data){
+            console.log(data)
+            var typesHTML = getWeather(data.list[6])
+            var fiveDayWeathers = [];
+            for (var i = 6; i < data.list.length; i += 8) {
+                console.log(data.list[i])
+                fiveDayWeathers.push(data.list[i])
+            }
+            for (var i = 0; i < fiveDayWeathers.length; i++) {
+                var oneDayWeather = getWeather(fiveDayWeathers[i])
+                $('.card-text').eq(i).append(oneDayWeather)
+            }
+        })
+
+    });
+
+
+
+}
 marker.on('dragend', onDragEnd);
 
 
-
-
-// geocode('Austin, TX', firstMapboxLectureKey).then(function(results){
-//     console.log(results)
-// })
