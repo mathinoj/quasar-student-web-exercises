@@ -11,10 +11,11 @@
 
 function getWeather(weather) {
     var html = '<div>';
-    html += '<h2>' + weather.main.temp + '</h2>';
-    html += '<h3>' + weather.main.humidity + '</h3>';
-    html += '<h4>' + weather.wind.speed + '</h4>'
-    html += '<h6>' + weather.main.pressure + '</h6>'
+    html += '<h2>' + weather.dt_txt + '</h2>';
+    html += '<h2>' + 'Temp: ' + weather.main.temp + '</h2>';
+    html += '<h3>' + 'Humidity: ' + weather.main.humidity + '</h3>';
+    html += '<h4>' + 'Wind Speed: ' + weather.wind.speed + '</h4>'
+    // html += '<h6>' + weather.main.pressure + '</h6>'
     // html += '<ul>' + wind.categories.join(', ') + '</ul>'
     html += '</div>';
 
@@ -39,6 +40,8 @@ $.get('http://api.openweathermap.org/data/2.5/forecast', {
         for (var i = 5; i < data.list.length; i += 8) {
             console.log(data.list[i])
             fiveDayWeathers.push(data.list[i])
+            // The push() method adds new items to the end of an array.
+            // push() changes the length of the array and returns the new length.
         }
 
 
@@ -49,88 +52,25 @@ $.get('http://api.openweathermap.org/data/2.5/forecast', {
 
     })
 
-// for (let i = 0; i < a.length; i++) {
-//     if (a[i] === theValue) {
-//         break;
-//     }
-// }
+mapboxgl.accessToken = firstMapboxLectureKey;
+console.log(firstMapboxLectureKey);
+
+// first we need variable that holds a map object
+mapboxgl.accessToken = firstMapboxLectureKey;
+console.log(firstMapboxLectureKey);
+
+var map = new mapboxgl.Map(
+    {
+        container: 'map',
+        style: 'mapbox://styles/mapbox/satellite-v9',
+        center: [-98.48632214484502, 29.39340897528683],
+        // minZoom: 5,
+        // maxZoom: 20,
+        zoom: 17,
+    }
+)
 
 
-//         $.ajax("data/blog.json", {
-//             type: 'GET'
-//         }).done(function (data) {
-//             console.log(data);
-//             data.forEach(function (blog) {
-//                 var blogHtml = renderBlog(blog);
-//                 console.log(blogHtml);
-//                 $( "#posts" ).append( blogHtml );
-//             });
-//         });
-//     }
-
-
-//
-//
-//     $.ajax("data/blog.json", {
-//         type: 'GET'
-//     }).done(function (data) {
-//         console.log(data);
-//         data.forEach(function (blog) {
-//             var blogHtml = renderBlog(blog);
-//             console.log(blogHtml);
-//             $( "#posts" ).append( blogHtml );
-//         });
-//     });
-// }
-// })();
-
-// $.get("http://api.openweathermap.org/data/2.5/weather", {
-//     APPID: openWeatherKey,
-//     q:     "San Antonio, US",
-//     units: "imperial"
-// }).done(function (data){
-//     console.log(data);
-// })
-
-// $.get("http://api.openweathermap.org/data/2.5/forecast?q={San+Antonio,+US}&appid={openWeatherKey}");
-// $.get("http://api.openweathermap.org/data/2.5/forecast?q=San+Antonio,+US&appid=openWeatherKey");
-
-
-// api.openweathermap.org/data/2.5/forecast?q={city name}&appid={API key}
-
-// (function () {
-//     "use strict";
-//     {
-//         function renderBlog(blog) {
-//             var html = '<div>';
-//             // html += '<tr>';
-//             html += '<h2>' + blog.title + '</h2>';
-//             html += '<p>' + blog.content + '</p>'
-//             html += '<h6>' + blog.date + '</h6>'
-//             html += '<ul>' + blog.categories.join(', ') + '</ul>'
-//             html += '</div>';
-//
-//             return html;
-//         }
-//
-//
-//         $.ajax("data/blog.json", {
-//             type: 'GET'
-//         }).done(function (data) {
-//             console.log(data);
-//             data.forEach(function (blog) {
-//                 var blogHtml = renderBlog(blog);
-//                 console.log(blogHtml);
-//                 $( "#posts" ).append( blogHtml );
-//             });
-//         });
-//     }
-// })();
-
-// function renderCoffees(coffees) {
-//     var html = '';
-//     for(var i = 0; i < coffees.length; i++) {
-//         html += renderCoffee(coffees[i]);
-//     }
-//     return html;
-// }
+geocode('Austin, TX', firstMapboxLectureKey).then(function(results){
+    console.log(results)
+})
