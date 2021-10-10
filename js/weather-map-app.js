@@ -24,7 +24,6 @@ function getWeather(weather) {
     return html;
 }
 
-
 $.get('http://api.openweathermap.org/data/2.5/forecast', {
     APPID: openWeatherKey,
     q: 'San Antonio, US',
@@ -69,11 +68,6 @@ $.get('http://api.openweathermap.org/data/2.5/forecast', {
             // which from the forLoop above starts at 5 but here it is "0 (zero)".
             // The append method applies the information that we retrieved and uses it for the five cards
         }
-
-        // var date = weather.dt
-        // for (var i=0; i < fiveDayWeathers.length; i++){
-        //
-        // }
     })
 
 mapboxgl.accessToken = firstMapboxLectureKey;
@@ -90,8 +84,6 @@ var map = new mapboxgl.Map(
         width: 100,
         style: 'mapbox://styles/mapbox/outdoors-v11',
         center: [-98.55791153784084, 29.488381434651984],
-        // minZoom: 5,
-        // maxZoom: 20,
         zoom: 5,
     });
 
@@ -105,6 +97,11 @@ function onDragEnd() {
     var lngLat = marker.getLngLat();
     console.log(lngLat);
 
+
+    // reverseGeocode({lat: 29.51035, lng:-98.64660}, firstMapboxLectureKey).then(function (results){
+    //     console.log(results) })
+    // INITIALLY you had the above. It did not need any "{} or []" cuz
+
     reverseGeocode(lngLat, firstMapboxLectureKey).then(function(address) {
         console.log(address);
         var addressArr = address.split(', ')
@@ -117,19 +114,24 @@ function onDragEnd() {
         }).done(function (data){
             console.log(data)
             var typesHTML = getWeather(data.list[6])
+            console.log(data.list[i])
+            console.log(typesHTML);
+
             var fiveDayWeathers = [];
+            $('.card-text').html('')
+
             for (var i = 6; i < data.list.length; i += 8) {
                 console.log(data.list[i])
                 fiveDayWeathers.push(data.list[i])
+
             }
             for (var i = 0; i < fiveDayWeathers.length; i++) {
                 var oneDayWeather = getWeather(fiveDayWeathers[i])
                 $('.card-text').eq(i).append(oneDayWeather)
+
             }
         })
-
-    });
-
+        })
 
 
 }
