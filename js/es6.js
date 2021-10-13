@@ -45,11 +45,11 @@ const languages = ['html', 'css', 'javascript'];
 
 
 // TODO: rewrite the object literal using object property shorthand
-users.push({
-    name: name,
-    email: email,
-    languages: languages
-});
+// users.push({
+//     name: name,
+//     email: email,
+//     languages: languages
+// });
 
 users.push({name, email, languages});
 
