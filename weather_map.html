@@ -12,6 +12,11 @@
     <link rel="stylesheet" href="css/weather-map-style.css">
 </head>
 <body>
+<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.2/mapbox-gl-geocoder.min.js"></script>
+<link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.2/mapbox-gl-geocoder.css" type="text/css">
+
+
+
 <!--TOP NAV BAR-->
 <div id="topNav">
     <nav class="navbar navbar-light bg-light">
@@ -22,121 +27,66 @@
 </div>
 <br>
 <!--SEARCH BUTTON-->
-<div id="searchButton">
-    <form class="form-inline">
+<!--<div id="searchButton">-->
+<!--    <div id="searcher" class="geocoder"></div>-->
+    <form id="userInput" class="form-inline">
+        <div>
         <span>Place</span>
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Find</button>
+        <input class="form-control mr-sm-2" id="search" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" id="submitter" type="submit" value="submit">Find</button>
+        </div>
     </form>
-</div>
+<!--</div>-->
 <br>
 <!--WEATHER CARDS-->
 <div class="card-deck">
 <!--CARD ONE    -->
     <div class="card">
-        <img class="card-img-top" src="img/day_1_2.png" alt="Card image cap">
+        <img class="card-img-top" src="" alt="Card image cap">
         <div class="card-body">
 <!--            <h5 class="card-title">Card title</h5>-->
             <p class="card-text"></p>
         </div>
-            <ul class="list-group list-group-flush">
-<!--                <li class="list-group-item">Humidity</li>-->
-<!--                <li class="list-group-item">Wind</li>-->
-<!--                <li class="list-group-item">Pressure</li>-->
-            </ul>
-<!--            <div class="card-body">-->
-<!--                <a href="#" class="card-link">Card link</a>-->
-<!--                <a href="#" class="card-link">Another link</a>-->
-<!--            </div>-->
-<!--        <div class="card-footer">-->
-<!--            <small class="text-muted">Last updated 3 mins ago</small>-->
-<!--        </div>-->
     </div>
 <!--CARD TWO-->
     <div class="card">
-        <img class="card-img-top" src="img/day_1_2.png" alt="Card image cap">
+        <img class="card-img-top" src="" alt="Card image cap">
         <div class="card-body">
 <!--            <h5 class="card-title">Card title</h5>-->
             <p class="card-text"></p>
         </div>
-        <ul class="list-group list-group-flush">
-<!--            <li class="list-group-item">Humidity</li>-->
-<!--            <li class="list-group-item">Wind</li>-->
-<!--            <li class="list-group-item">Pressure</li>-->
-        </ul>
-<!--        <div class="card-body">-->
-<!--            <a href="#" class="card-link">Card link</a>-->
-<!--            <a href="#" class="card-link">Another link</a>-->
-<!--        </div>-->
-<!--        <div class="card-footer">-->
-<!--            <small class="text-muted">Last updated 3 mins ago</small>-->
-<!--        </div>-->
     </div>
 <!--CARD THREE-->
     <div class="card">
-        <img class="card-img-top" src="img/day_3.png" alt="Card image cap">
+        <img class="card-img-top" src="" alt="Card image cap">
         <div class="card-body">
 <!--            <h5 class="card-title">Card title</h5>-->
             <p class="card-text"></p>
         </div>
-        <ul class="list-group list-group-flush">
-<!--            <li class="list-group-item">Humidity</li>-->
-<!--            <li class="list-group-item">Wind</li>-->
-<!--            <li class="list-group-item">Pressure</li>-->
-        </ul>
-<!--        <div class="card-body">-->
-<!--            <a href="#" class="card-link">Card link</a>-->
-<!--            <a href="#" class="card-link">Another link</a>-->
-<!--        </div>-->
-<!--        <div class="card-footer">-->
-<!--            <small class="text-muted">Last updated 3 mins ago</small>-->
-<!--        </div>-->
     </div>
 <!--CARD FOUR-->
     <div class="card">
-        <img class="card-img-top" src="img/day_4.png" alt="Card image cap">
+        <img class="card-img-top" src="" alt="Card image cap">
         <div class="card-body">
 <!--            <h5 class="card-title">Card title</h5>-->
             <p class="card-text"></p>
         </div>
-        <ul class="list-group list-group-flush">
-<!--            <li class="list-group-item">Humidity</li>-->
-<!--            <li class="list-group-item">Wind</li>-->
-<!--            <li class="list-group-item">Pressure</li>-->
-        </ul>
-<!--        <div class="card-body">-->
-<!--            <a href="#" class="card-link">Card link</a>-->
-<!--            <a href="#" class="card-link">Another link</a>-->
-<!--        </div>-->
-<!--        <div class="card-footer">-->
-<!--            <small class="text-muted">Last updated 3 mins ago</small>-->
-<!--        </div>-->
     </div>
 <!--CARD FIVE-->
     <div class="card">
-        <img class="card-img-top" src="img/day_5.png" alt="Card image cap">
+        <img class="card-img-top" src="" alt="Card image cap">
         <div class="card-body">
 <!--            <h5 class="card-title">Card title</h5>-->
             <p class="card-text"></p>
         </div>
-        <ul class="list-group list-group-flush">
-<!--            <li class="list-group-item">Humidity</li>-->
-<!--            <li class="list-group-item">Wind</li>-->
-<!--            <li class="list-group-item">Pressure</li>-->
-        </ul>
-<!--        <div class="card-body">-->
-<!--            <a href="#" class="card-link">Card link</a>-->
-<!--            <a href="#" class="card-link">Another link</a>-->
-<!--        </div>-->
-<!--        <div class="card-footer">-->
-<!--            <small class="text-muted">Last updated 3 mins ago</small>-->
-<!--        </div>-->
     </div>
 </div>
 
 <br>
 <div id="map" ></div>
 <pre id="coordinates" class="coordinates"></pre>
+<!--<div id="searcher" class="geocoder"></div>-->
+
 
 
 <!--style="margin: 0 auto; width:855px;-->

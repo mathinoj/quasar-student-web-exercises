@@ -87,6 +87,53 @@ var map = new mapboxgl.Map(
         zoom: 5,
     });
 
+var geocoderSearch = new MapboxGeocoder({
+    accessToken: mapboxgl.accessToken,
+    mapboxgl: mapboxgl
+
+})
+
+// document.getElementById('searcher').appendChild(geocoderSearch.onAdd(map));
+// console.log(geocoderSearch)
+
+// var newLngLat = geocoderSearch.r.mapMarker
+// console.log(newLngLat)
+function onSearch() {
+    var newLngLat = marker.getLngLat();
+    console.log(newLngLat)
+}
+
+
+var form = document.getElementById("userInput");
+
+
+
+let inputUser = document.getElementById("search").value; // Variable grailed_email fixed
+console.log(inputUser)
+
+document.getElementById("submitter").addEventListener("click", function () {
+    form.submit();
+});
+
+let getUser = inputUser.toString();
+console.log(getUser)
+
+// geocode('Austin, TX', firstMapboxLectureKey).then(function(where){
+//     console.log(where)
+// })
+
+    // var usernameInput = document.forms.userInput.search;
+    // console.log(usernameInput);
+    //    geocode(usernameInput, firstMapboxLectureKey).then(function(where) {
+    //        console.log(where)
+    //    })
+
+   // geocode(document.getElementById('searcher').value, firstMapboxLectureKey).then(function (results){
+   //   console.log(results)
+   // })
+
+
+
 var marker = new mapboxgl.Marker({
     draggable: true
 })
@@ -137,4 +184,45 @@ function onDragEnd() {
 }
 marker.on('dragend', onDragEnd);
 
+// $('#submit').click(function() {
+//     var location = $(searcher).val();
+//     console.log(location)
+//     geocode(location, firstMapboxLectureKey).then(function (result) {
+//         var latitude = result[1].toString();
+//         var longitude = result[0].toString();
+//         $.get("'http://api.openweathermap.org/data/2.5/forecast'" + "/" + latitude + ", " + longitude).done(function (data) {
+//
+//             // console.log(data);
+//         });
+//         map.flyTo({ center:result,zoom:10});
+//         $("#location").html(location.charAt(0).toUpperCase() + location.slice(1,location.length));
+//         marker.setLngLat([longitude, latitude])
+//     });
+// });
 
+
+
+
+
+
+
+// function typeSearch() {
+//     var input, filter, i;
+//     // var newCoffee = [];
+//     input = document.getElementById("searcher")
+//     filter = input.value.toUpperCase();
+// console.log(input)
+//     console.log(filter)
+//     // for (i = 0; i < coffees.length; i++) {
+//     // coffees.forEach(function(coffee) {
+//     //     if (coffee.name.toUpperCase().includes(filter.toUpperCase())) {
+//             // newCoffee.push(coffee)
+//             // console.log(newCoffee)
+//             // tbody.innerHTML = renderCoffees(newCoffee);
+//         // }})
+//
+// }
+//
+// var submitButton = document.querySelector('#submitter');
+// submitButton.addEventListener('click', typeSearch);
+// console.log()
