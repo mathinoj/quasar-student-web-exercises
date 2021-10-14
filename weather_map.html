@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Map</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+          integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
+
+    <link rel="stylesheet" href="css/weather-map-style.css">
+</head>
+<body>
+<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.2/mapbox-gl-geocoder.min.js"></script>
+<link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.2/mapbox-gl-geocoder.css" type="text/css">
+
+
+
+<!--TOP NAV BAR-->
+<div id="topNav">
+    <nav class="navbar navbar-light bg-light">
+  <span class="navbar-text">
+    Weather m-APP
+  </span>
+    </nav>
+</div>
+<br>
+<!--SEARCH BUTTON-->
+<!--<div id="searchButton">-->
+<!--    <div id="searcher" class="geocoder"></div>-->
+    <form id="userInput" class="form-inline">
+        <div>
+        <span>Place</span>
+        <input class="form-control mr-sm-2" id="search" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" id="submitter" type="submit" value="submit">Find</button>
+        </div>
+    </form>
+<!--</div>-->
+<br>
+<!--WEATHER CARDS-->
+<div class="card-deck">
+<!--CARD ONE    -->
+    <div class="card">
+        <img class="card-img-top" src="" alt="Card image cap">
+        <div class="card-body">
+<!--            <h5 class="card-title">Card title</h5>-->
+            <p class="card-text"></p>
+        </div>
+    </div>
+<!--CARD TWO-->
+    <div class="card">
+        <img class="card-img-top" src="" alt="Card image cap">
+        <div class="card-body">
+<!--            <h5 class="card-title">Card title</h5>-->
+            <p class="card-text"></p>
+        </div>
+    </div>
+<!--CARD THREE-->
+    <div class="card">
+        <img class="card-img-top" src="" alt="Card image cap">
+        <div class="card-body">
+<!--            <h5 class="card-title">Card title</h5>-->
+            <p class="card-text"></p>
+        </div>
+    </div>
+<!--CARD FOUR-->
+    <div class="card">
+        <img class="card-img-top" src="" alt="Card image cap">
+        <div class="card-body">
+<!--            <h5 class="card-title">Card title</h5>-->
+            <p class="card-text"></p>
+        </div>
+    </div>
+<!--CARD FIVE-->
+    <div class="card">
+        <img class="card-img-top" src="" alt="Card image cap">
+        <div class="card-body">
+<!--            <h5 class="card-title">Card title</h5>-->
+            <p class="card-text"></p>
+        </div>
+    </div>
+</div>
+
+<br>
+<div id="map" ></div>
+<pre id="coordinates" class="coordinates"></pre>
+<!--<div id="searcher" class="geocoder"></div>-->
+
+
+
+<!--style="margin: 0 auto; width:855px;-->
+
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+
+<script src="keys.js"></script>
+<script src="js/mapbox-geocoder-utils.js"></script>
+<script src="js/weather-map-app.js"></script>
+
+
+</body>
+</html>

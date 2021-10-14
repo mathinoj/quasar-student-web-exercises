@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Map Call Examples</title>
+</head>
+<body>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script src="keys.js"></script>
+
+<script>
+    $.get("http://api.openweathermap.org/data/2.5/weather", {
+        APPID: openWeatherKey,
+        q:     "San Antonio, US",
+        // id: 4726206,
+        // lat:
+        // lng:
+        // rather than doing the "q" part above 'id' you can just use id and put the number, or use lat/lng coordinates
+        units: "imperial"
+        // temps are kelvin at default so the above is how you change it
+    }).done(function (data){
+        console.log(data);
+    })
+</script>
+
+
+</body>
+</html>

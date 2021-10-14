@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Map ~ Filter ~ Reduce</title>
+</head>
+<body>
+
+<script>
+
+    //~ * Map * ~
+
+    //TODO Together: Let's see a common approach we might have done in the past: our goal is to increase each element of an array by 1 [element + 1], then get an array back with those values
+
+    var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+    var numbersAddOne = [];
+
+    for (var i = 0; i < numbers.length; i += 1) {
+        numbersAddOne.push(numbers[i] + 1);
+    }
+    // console.log(numbersAddOne); // [2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+
+    //TODO Together: Now, let's achieve the same result with the first part of our lesson: the MAP method~
+    let numberAddOneMap = numbers.map(function (number) {
+        return number + 1;
+    })
+    console.log(numberAddOneMap);
+    //this is a call back function (function (){ })
+    // this is a shortened version from line 19-20
+    // you could take out lines 19-20 and the function on 25 will still work
+
+    //As you can see, .map() accepts a callback function - that callback function is applied to each element in the collection. What about a dive into a deeper, more complicated collection?
+
+    const favoriteRestaurants = [
+        {
+            name: "India Palace",
+            address: "8474 Fredericksburg Rd, San Antonio, TX 78229",
+            phone: "(210) 692-5262",
+            restaurantFeatures: ["buffet", "party room", "to-go"]
+        },
+        {
+            name: "Taqueria Jalisco",
+            address: "7094 Bandera Rd, San Antonio, TX 78238",
+            phone: "(210) 543-9400",
+            restaurantFeatures: ["to-go", "breakfast"]
+        },
+        {
+            name: "Sukhothai Thai Restaurant Express",
+            address: "7664 Tezel Rd Suite 105, San Antonio, TX 78250",
+            phone: "(210) 314-1106",
+            restaurantFeatures: ["to-go", "limited seating"]
+        }
+    ]
+
+    // let namesOf = favoriteRestaurants.name.map(function(nombres){
+    //
+    // })
+
+
+    //TODO Together: Let's get all these restaurant names out of this array of objects with .map()!
+    let restaurantNames = favoriteRestaurants.map(function (restaurant) {
+        // return restaurant.name
+        // return restaurant.address
+        // return restaurant.phone
+        return restaurant.restaurantFeatures
+    })
+    console.log(restaurantNames);
+
+
+    //TODO: Create your own array of (up to 3 and at least 2) restaurant objects building off of the basic list you created during the MapBox exercise (or build one anew!) ~5 mins
+
+    const restaurants = [
+        {
+            place: "Wingstopper",
+            food: "wings",
+            specialty: ["sauces"]
+        },
+        {
+            place: "Hon Machi",
+            food: "Korean BBQ",
+            specialty: ["bulgogi", "samgyeopsol"]
+        },
+        {
+            place: "2M",
+            food: "BBQ",
+            specialty: ["brisket", "sausage", "sides"],
+        }
+    ]
+
+    //TODO: Now, having created a personal array of restaurant objects for yourself, use .map() to get your favorite restaurant's names out of that collection, into another array, and out into the console! ~5 mins
+    let favePlaces = restaurants.map(function (placeName) {
+        return placeName.place
+        // return placeName.place +phone+  THIS DONT WORK
+    })
+    console.log(favePlaces);
+    //~ * Filter * ~
+
+    //TODO Together: Once again, let's take a look at the old way we might approach an issue: getting only one type of values out of an array (for example: even numbers only from an array of nums!)
+
+    // var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    // CLOSED THESE TWO FOR THE TODO BELOW
+    // var evens = [];
+
+    // for (var i = 0; i < numbers.length; i += 1) {
+    //     if (numbers[i] % 2 === 0) {
+    //         evens.push(numbers[i]);
+    //     }
+    // }
+    // console.log(evens); CLOSED <= FOR THE THING BELOW // [2, 4, 6, 8, 10]
+
+
+    //TODO Together: Now, let's refactor the above using the ES6 .filter() method with the same goal: even numbers only!
+    let evens = numbers.filter(function (num) {
+        return num % 2 === 0;
+    })
+    console.log("es6 version of evens:")
+    console.log(evens)
+
+    //TODO Together: Using my favoriteRestaurants list, let's filter out all of the non-buffet restaurants
+let hasBuffet = favoriteRestaurants.filter(function (restaurant){
+    return restaurant.restaurantFeatures.includes('buffet');
+})
+    console.log(hasBuffet);
+
+    //TODO: Each one of your restaurant arrays is unique, but, in that array, identify something to filter by - it could be as simple as "well, let me filter out all of the restaurants with names shorter than 8 characters" or get as complicated as you'd like!
+    // TODO: Once you've figured our what you want to filter, go ahead and write the necessary code to achieve what you wanted - remember to practice with .filter() and our ES6 verbiage!
+let nameLessThan17 = favoriteRestaurants.filter(function(restaurant){
+    return restaurant.name.length < 17;
+})
+    console.log(nameLessThan17);
+
+let nameLess = restaurants.filter(function(restaurant){
+    return restaurant.place.length < 10;
+})
+    console.log(nameLess);
+
+    //~ * Reduce * ~
+
+    //Reduce is an interesting animal in and of itself: it's a way to reduce a collection down to, typically, a single value of some kind:
+
+    //TODO Together: Let's sum up some numbers with the .reduce() method and a number array!
+
+    let numbersReduced = [1, 2, 3, 4, 5];
+
+    //0+1[i]
+    //1(<= total from previous)+2[i]
+    //3(<= total from previous)+3[i]
+    //6(<= total from previous)+4[i]
+    //10(<= total from previous)+5[i]
+    //done, total = 15
+
+    //in the past: we would have built out a loop, probably used a var of sum, and had a look inside of the loop of sum += numbers[i], spit out sum with the sum of our numbers
+
+    let sum = numbersReduced.reduce(function (total, number){ //total = initial value; number is name for current element and array
+        return total + number;
+    })//, 1) adding this number would add that number to the total
+    console.log("here is sum from first .reduce example")
+    console.log(sum);
+
+
+
+    //In ES6 with .reduce(). .reduce() has a couple of components to it: .reduce(callbackFunction, initialValue)
+
+
+    //TODO Together: Let's take a step a bit deeper with .reduce() - .reduce()'s output can take many forms and shapes. For example, let's say we wanted to have a little Javascript that would count the length of the strings in an array and return that info back to us in an object. For example: ["Codeup", "San", Antonio", "Dallas", "Quasar", Cohort", "ES6"] would get us: Object { Codeup: 6, San: 3, Antonio: 7, Dallas: 6, Quasar: 6, Cohort: 6, ES6: 3 }
+
+    let stringArr = ["Codeup", "San", "Antonio", "Dallas", "Quasar", "Cohort", "ES6"];
+
+let strLengthObj = stringArr.reduce(function(objectProp, element){ //you can name these whatever! you tried mafia and don
+    objectProp[element] = element.length; //assign the length as a value of the property named element {elementName: elementLength}
+    return objectProp;
+}, {})
+    console.log(strLengthObj)
+    //TODO: Let's make a new array of objects to use - make an array of objects [{},{},{}] consisting of a number of family members as objects with their name and ages as properties. Use .reduce() to sum up the age of those family members and see what it is! e.g. [{name: "Thurston Howell III", age: 50}, {name: "William Dean Howells", age: 83}] would be 133 by adding those two age properties together (50 + 83).
+
+    let famNameAge = [{name: 'George', age: 66}, {name: 'Rebecca', age: 65}, {name: 'Tamara', age: 40}, {name: 'Matthias', age: 36}, {name: 'Samuel', age: 43}, {name: 'Sammy', age: 8}, {name: 'Galilea', age: 5}, {name: 'Izabela', age: 1}]
+
+    // let famAgeTotez = total.age.reduce(function (total, number){ //total = initial value; number is name for current element and array
+    //     return total + number;
+    // })//, 1) adding this number would add that number to the total
+    // console.log("here is sum from first .reduce example")
+    // console.log(famAgeTotez);
+
+    let totalAge = famNameAge.reduce(function (result, individual){ //result starts the iteration index point
+        return result + individual.age
+    }, 0)
+    console.log(totalAge);
+
+    //result=0 - [step 1]
+    // iteration 1: x + individual[0].age - 66
+    // iteration 2: x + individual[1].age - 65
+    // iteration 3: x + individual[2].age - 40
+    // iteration 4: x + individual[3].age - 36
+    // iteration 5: x + individual[4].age - 43
+    // iteration 6: x + individual[5].age - 8
+    // iteration 7: x + individual[6].age - 5
+    // iteration 8: x + individual[7].age - 1
+
+
+</script>
+</body>
+</html>

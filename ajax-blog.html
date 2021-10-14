@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+          integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <style>
+        body {background-color: black; padding: 1em}
+        h2   {color: white;}
+        p    {color: orangered; border: solid grey 5px; border-radius: 15px; padding: .5em}
+        h6   {color: darkgoldenrod}
+        ul   {color: papayawhip}
+
+    </style>
+
+</head>
+<body>
+
+<div id='posts'>
+
+</div>
+
+<!--<div class="form-group">-->
+<!--    <label for="exampleFormControlTextarea1">Example textarea</label>-->
+<!--    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>-->
+<!--</div>-->
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+<script>
+    (function () {
+        "use strict";
+        {
+            function renderBlog(blog) {
+                var html = '<div>';
+                // html += '<tr>';
+                html += '<h2>' + blog.title + '</h2>';
+                html += '<p>' + blog.content + '</p>'
+                html += '<h6>' + blog.date + '</h6>'
+                html += '<ul>' + blog.categories.join(', ') + '</ul>'
+                html += '</div>';
+
+                return html;
+            }
+
+
+            $.ajax("data/blog.json", {
+                type: 'GET'
+            }).done(function (data) {
+                console.log(data);
+                data.forEach(function (blog) {
+                    var blogHtml = renderBlog(blog);
+                    console.log(blogHtml);
+                    $( "#posts" ).append( blogHtml );
+                });
+            });
+        }
+    })();
+
+    function refresh() {
+        window.location.reload("refresh");
+        console.log(refresh)
+    }
+
+</script>
+
+
+</body>
+</html>
