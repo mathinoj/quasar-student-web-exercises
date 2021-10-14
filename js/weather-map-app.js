@@ -98,25 +98,42 @@ var geocoderSearch = new MapboxGeocoder({
 
 // var newLngLat = geocoderSearch.r.mapMarker
 // console.log(newLngLat)
-function onSearch() {
-    var newLngLat = marker.getLngLat();
-    console.log(newLngLat)
-}
 
 
-var form = document.getElementById("userInput");
+// var listener = function (e) {
+//     e.preventDefault();
+// }
 
+var userInput = document.getElementById('search');
+
+document.querySelector('form.form-inline').addEventListener('submit', function (e) {
+    e.preventDefault();
+    // The preventDefault() method cancels the event if it is cancelable, meaning that the default action that belongs to the event will not occur.
+    // For example, this can be useful when:
+    // Clicking on a "Submit" button, prevent it from submitting a form
+    // Clicking on a link, prevent the link from following the URL
+    console.log(userInput.value);
+});
+
+
+// geocode('', firstMapboxLectureKey).then(function (where){
+//     console.log(where)
+// })
+
+geocode('Austin, TX', firstMapboxLectureKey).then(function(where){
+    console.log(where)
+})
 
 
 let inputUser = document.getElementById("search").value; // Variable grailed_email fixed
 console.log(inputUser)
 
-document.getElementById("submitter").addEventListener("click", function () {
-    form.submit();
-});
-
-let getUser = inputUser.toString();
-console.log(getUser)
+// document.getElementById("submitter").addEventListener("click", function () {
+//     form.submit();
+// });
+//
+// let getUser = inputUser.toString();
+// console.log(getUser)
 
 // geocode('Austin, TX', firstMapboxLectureKey).then(function(where){
 //     console.log(where)

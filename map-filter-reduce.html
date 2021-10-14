@@ -72,7 +72,7 @@
 
     const restaurants = [
         {
-            place: "Wingstop",
+            place: "Wingstopper",
             food: "wings",
             specialty: ["sauces"]
         },
@@ -125,7 +125,15 @@ let hasBuffet = favoriteRestaurants.filter(function (restaurant){
 
     //TODO: Each one of your restaurant arrays is unique, but, in that array, identify something to filter by - it could be as simple as "well, let me filter out all of the restaurants with names shorter than 8 characters" or get as complicated as you'd like!
     // TODO: Once you've figured our what you want to filter, go ahead and write the necessary code to achieve what you wanted - remember to practice with .filter() and our ES6 verbiage!
+let nameLessThan17 = favoriteRestaurants.filter(function(restaurant){
+    return restaurant.name.length < 17;
+})
+    console.log(nameLessThan17);
 
+let nameLess = restaurants.filter(function(restaurant){
+    return restaurant.place.length < 10;
+})
+    console.log(nameLess);
 
     //~ * Reduce * ~
 
@@ -133,9 +141,24 @@ let hasBuffet = favoriteRestaurants.filter(function (restaurant){
 
     //TODO Together: Let's sum up some numbers with the .reduce() method and a number array!
 
-    // let numbers = [1, 2, 3, 4, 5];
+    let numbersReduced = [1, 2, 3, 4, 5];
+
+    //0+1[i]
+    //1(<= total from previous)+2[i]
+    //3(<= total from previous)+3[i]
+    //6(<= total from previous)+4[i]
+    //10(<= total from previous)+5[i]
+    //done, total = 15
 
     //in the past: we would have built out a loop, probably used a var of sum, and had a look inside of the loop of sum += numbers[i], spit out sum with the sum of our numbers
+
+    let sum = numbersReduced.reduce(function (total, number){ //total = initial value; number is name for current element and array
+        return total + number;
+    })//, 1) adding this number would add that number to the total
+    console.log("here is sum from first .reduce example")
+    console.log(sum);
+
+
 
     //In ES6 with .reduce(). .reduce() has a couple of components to it: .reduce(callbackFunction, initialValue)
 
@@ -144,9 +167,53 @@ let hasBuffet = favoriteRestaurants.filter(function (restaurant){
 
     let stringArr = ["Codeup", "San", "Antonio", "Dallas", "Quasar", "Cohort", "ES6"];
 
-
+let strLengthObj = stringArr.reduce(function(objectProp, element){ //you can name these whatever! you tried mafia and don
+    objectProp[element] = element.length; //assign the length as a value of the property named element {elementName: elementLength}
+    return objectProp;
+}, {})
+    console.log(strLengthObj)
     //TODO: Let's make a new array of objects to use - make an array of objects [{},{},{}] consisting of a number of family members as objects with their name and ages as properties. Use .reduce() to sum up the age of those family members and see what it is! e.g. [{name: "Thurston Howell III", age: 50}, {name: "William Dean Howells", age: 83}] would be 133 by adding those two age properties together (50 + 83).
 
+    let famNameAge = [{name: 'George', age: 66}, {name: 'Rebecca', age: 65}, {name: 'Tamara', age: 40}, {name: 'Matthias', age: 36}, {name: 'Samuel', age: 43}, {name: 'Sammy', age: 8}, {name: 'Galilea', age: 5}, {name: 'Izabela', age: 1}]
+
+    // let famAgeTotez = total.age.reduce(function (total, number){ //total = initial value; number is name for current element and array
+    //     return total + number;
+    // })//, 1) adding this number would add that number to the total
+    // console.log("here is sum from first .reduce example")
+    // console.log(famAgeTotez);
+
+    let totalAge = famNameAge.reduce(function (result, individual){ //result starts the iteration index point
+        return result + individual.age
+    }, 0)
+    console.log(totalAge);
+
+    //result=0 - [step 1]
+    // iteration 1: x + individual[0].age - 66
+    // iteration 2: x + individual[1].age - 65
+    // iteration 3: x + individual[2].age - 40
+    // iteration 4: x + individual[3].age - 36
+    // iteration 5: x + individual[4].age - 43
+    // iteration 6: x + individual[5].age - 8
+    // iteration 7: x + individual[6].age - 5
+    // iteration 8: x + individual[7].age - 1
+
+    // let ages = famNameAge.filter(function(rage){
+    //     return rage.age;
+    // })
+    // console.log(ages);
+    //
+    //
+    // let totalAge = ages.reduce(function(total){ //you can name these whatever! you tried mafia and don
+    //     // total[element] = element.length; //assign the length as a value of the property named element {elementName: elementLength}
+    //     return total;
+    // }, 0)
+    // console.log(totalAge);
+
+    // let famAgeTotez = total.age.reduce(function (total, number){ //total = initial value; number is name for current element and array
+    //     return total + number;
+    // })//, 1) adding this number would add that number to the total
+    // console.log("here is sum from first .reduce example")
+    // console.log(famAgeTotez);
 
 </script>
 </body>
