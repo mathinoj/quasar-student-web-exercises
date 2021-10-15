@@ -1,21 +1,34 @@
 
 "use strict";
+console.log("A promise lecture");
 
 /*********************************************
  *        USING FETCH WITH PROMISES
  ******************************************** */
 
-var pokemonAPI = fetch('https://pokeapi.co/api/v2/pokemon');
+// var pokemonAPI = fetch('https://pokeapi.co/api/v2/pokemon');
 // return of fetch request is a Promise object
 
 //TODO: console log the results of the above Promise. What is the result?
+// console.log(pokemonAPI);
 
 //TODO: add a method that runs if the Promise resolves successfully
 
 //TODO: add a method that runs if the Promise fails
 
 //TODO: In the callback function of the .then method, parse the response into JSON
+// pokemonAPI.then(function (results){
+//     console.log(results);
+// }) //JUST ALL THIS GIVE BACK A 'RESPONSE' IN THE CONSOLE
 
+
+// pokemonAPI.then(function (results){
+//     console.log(results);
+//     // results.text().then((text)=>(console.log(text))); //this brings up a lot of text all jumbled on same console which looks disorganized
+//     results.json().then((resultsObject)=> console.log(resultsObject)); //unlike the one above, this brings up organized data
+// }).catch(function (err){
+//     console.log('err', err);
+// })
 
 /*********************************************
  *              CHAINING PROMISES
@@ -27,6 +40,25 @@ var pokemonAPI = fetch('https://pokeapi.co/api/v2/pokemon');
 
 // TODO: Finally, chain another .then method that would log all of the name properties of the
 //  returned pokemon.
+
+// fetch('https://pokeapi.co/api/v2/pokemon')
+//     .then(function(results){
+//         console.log(results);
+//     results.json()
+//     .then((resultsObj)=>{return resultsObj.results})
+//     .then((pokemon)=>console.log(pokemon[0]));
+//     }) .catch(function(err){
+//         console.log('err', err);
+// })
+
+// BELOW IS A CLEANER VERSION WHEN COMPARED TO THE ONE ABOVE
+fetch('https://pokeapi.co/api/v2/pokemon')
+    .then((response)=>response.json())
+    .then((jsonData)=>jsonData.results)
+    // .then((results)=>console.log(results))
+    .then((results)=>results.forEach((result)=>console.log(result.name)));
+
+
 // BONUS: Is there a way for us to clean up our code?
 
 // Let's try working with the Star Wars API!
