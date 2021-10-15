@@ -1,7 +1,7 @@
 'use strict';
-
-mapboxgl.accessToken = firstMapboxLectureKey;
-console.log(firstMapboxLectureKey);
+//
+// mapboxgl.accessToken = firstMapboxLectureKey;
+// console.log(firstMapboxLectureKey);
 
 // first we need variable that holds a map object
 mapboxgl.accessToken = firstMapboxLectureKey;
@@ -57,24 +57,55 @@ console.log(firstMapboxLectureKey);
 mapboxgl.accessToken = firstMapboxLectureKey;
 var map = new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/mapbox/satellite-v9',
+    style: 'mapbox://styles/mapbox/outdoors-v11',
     center: [-98.55789544461693, 29.48864759507882],
-    zoom: 19
+    zoom: 12
 });
 
-var cityCoordinates = [
-    [-98.55789544461693, 29.48864759507882],
-    [-98.48632214484502, 29.39340897528683],
-    [-98.570000459961685, 29.511746976534077],
-    [-98.58423889023796, 29.53839297877265],
-    [-98.40468548399008, 29.387494627689]
-];
 
+var restaurants = [
+    {
+        "place": "Wingstop",
+        "food": "wings",
+        "location": ["7959 Fredericksburg Rd Ste 151, San Antonio, TX 78229"],
+    },
+    {
+        "place": "Hon Machi",
+        "food": "Korean BBQ",
+        "location": ["10222 Huebner Rd Ste 110, San Antonio, TX 78240"],
+    },
+    {
+        "place": "2M",
+        "food": "BBQ",
+        "location": ["2731 S WW White Rd, San Antonio, TX 78222"],
+    }
+]
 
-cityCoordinates.forEach(function(coordinate){
-    console.log("here is a cordinate " +coordinate)
-    // fly with default options to null island
+geocode(restaurants[0].location, firstMapboxLectureKey).then(function (result){
+    map.setCenter(result);
+    var marker = new mapboxgl.Marker()
+        .setLngLat(result)
+        .addTo(Map);
 })
+
+
+
+
+
+
+// var cityCoordinates = [
+//     [-98.55789544461693, 29.48864759507882],
+//     [-98.48632214484502, 29.39340897528683],
+//     [-98.570000459961685, 29.511746976534077],
+//     [-98.58423889023796, 29.53839297877265],
+//     [-98.40468548399008, 29.387494627689]
+// ];
+//
+//
+// cityCoordinates.forEach(function(coordinate){
+//     console.log("here is a cordinate " +coordinate)
+//     // fly with default options to null island
+// })
 
 
 
@@ -136,3 +167,25 @@ cityCoordinates.forEach(function(coordinate){
 //             // "location": [-98.40468548399008, 29.387494627689],
 //         }
 //     ]
+
+// var restaurants = [
+//     {
+//         "place": "Wingstop",
+//         "food": "wings",
+//         "location": ["7959 Fredericksburg Rd Ste 151, San Antonio, TX 78229"],
+//     },
+//         {
+//             "place": "Hon Machi",
+//             "food": "Korean BBQ",
+//             "location": ["10222 Huebner Rd Ste 110, San Antonio, TX 78240"],
+//         },
+//         {
+//             "place": "2M",
+//             "food": "BBQ",
+//             "location": ["2731 S WW White Rd, San Antonio, TX 78222"],
+//         }
+//     ]
+//
+// geocode(restaurants[0].location, firstMapboxLectureKey).then(function (result){
+//     map.setCenter(result);
+// })

@@ -1,4 +1,3 @@
-
 "use strict";
 console.log("A promise lecture");
 
@@ -52,11 +51,11 @@ console.log("A promise lecture");
 // })
 
 // BELOW IS A CLEANER VERSION WHEN COMPARED TO THE ONE ABOVE
-fetch('https://pokeapi.co/api/v2/pokemon')
-    .then((response)=>response.json())
-    .then((jsonData)=>jsonData.results)
-    // .then((results)=>console.log(results))
-    .then((results)=>results.forEach((result)=>console.log(result.name)));
+// fetch('https://pokeapi.co/api/v2/pokemon')
+//     .then((response)=>response.json())
+//     .then((jsonData)=>jsonData.results)
+//     // .then((results)=>console.log(results))
+//     .then((results)=>results.forEach((result)=>console.log(result.name)));
 
 
 // BONUS: Is there a way for us to clean up our code?
@@ -64,10 +63,50 @@ fetch('https://pokeapi.co/api/v2/pokemon')
 // Let's try working with the Star Wars API!
 
 // TODO: Using Promises, make a fetch request to the Star Wars API
-
+// fetch('https://swapi.dev/api/films')
 // TODO: Use Promise chaining to console log the json response
+
+//     .then((response)=>{
+//         return response.json();
+//         // console.log(response.json());
+//     }).then((starWarsFilmData)=>{  //From ((starWars... to the '}' below the console is the callback.
+//     // jsonData is the parsed object from the call to response.json.
+//     // WHAT IS PARSED:
+//     // parseInt: attempts to convert a string to an integer value THIS AND THE ONE BELOW ARE FOR JS CONVERT STRING TO NUMBERS, I THINK
+//     // parseFloat: attempts to convert a string to a floating point (i.e. decimal) value
+//     // The JSON.parse() method parses a string and returns a JavaScript object.
+//     // The string has to be written in JSON format.
+//     // The JSON.parse() method can optionally transform the result with a function.
+//         console.log(starWarsFilmData.results);
+//         starWarsFilmData.results.forEach((film)=>{console.log(film.title)})
+// })
+
+// .forEach(function(film){
+//     console.log(film.title)
+// })
+//THIS IS HOW YOU WOULD WRITE OUT THE FOR EACH FUNCTION WITHOUT THE ARROW!!
+
 
 // TODO: chain another method that iterates through the results array and console logs the names
 
 // TODO: Demonstrate Promise.all and Promise.race
+var pokemonAPI = fetch('https://pokeapi.co/api/v2/pokemon');
+let starWarsAPI = fetch('https://swapi.dev/api/films')
 
+// Promise.all([pokemonAPI, starWarsAPI])
+//     .then((responses) => {
+//         //Responses contains the resolved promises in the same order that they were passed into the all method.
+//         //YOU DONT HAVE TO DO THIS (THE ONE BELOW THIS LINE)
+//         // console.log(responses[0].json().then((parsedData)=>{console.log(parsedData)}))
+//         return Promise.all(
+//             responses.map((response) => {
+//                     return response.json()
+//                 }
+//             ))
+//     }).then((parsedResults)=>{
+//     console.log(parsedResults);
+// });
+
+Promise.race([pokemonAPI, starWarsAPI])
+.then((response)=>{console.log(response)})
+//THE POKEMONAPI IS COMING UP FIRST CUZ IT RESPONDS FASTER
