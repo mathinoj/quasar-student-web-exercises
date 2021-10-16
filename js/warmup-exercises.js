@@ -417,8 +417,8 @@
 // var date = new Date(1618317040).toLocaleDateString("en-US")
 // console.log(date)
 
-var date = new Date(1618317040)
-console.log(date)
+// var date = new Date(1618317040)
+// console.log(date)
 
 // Date objects are created with the new Date() constructor. There are 4 ways to create a new date object:
 //     new Date()
@@ -431,9 +431,44 @@ console.log(date)
 // https://www.w3schools.com/js/js_dates.asp
 // https://coderrocketfuel.com/article/convert-a-unix-timestamp-to-a-date-in-vanilla-javascript THIS USES BASIC JS, SEE BELOW
 
-var thisMorning = 1633702800;
-function convert(dtNum){
-    var dtMilliSecs = dtNum * 1000 //seconds * 1000 = our milliseconds
-    var dateObj = new Date(dtMilliSecs); //pass in milliseconds to Date(constructor)
-    return dateObj.toLocaleString();
+// var thisMorning = 1633702800;
+// function convert(dtNum){
+//     var dtMilliSecs = dtNum * 1000 //seconds * 1000 = our milliseconds
+//     var dateObj = new Date(dtMilliSecs); //pass in milliseconds to Date(constructor)
+//     return dateObj.toLocaleString();
+// }
+
+
+ // Get Sum of People's Budget
+ // Create the function named getBudgets that takes an array with objects and returns the sum of people's budgets.
+ //
+ // Examples
+//TODO []=array
+// {} inside array = object
+// {stuff inside curly brackets is a whole element}
+// {singular items within curly braCkets (i.e. name, age, budget) is a property}
+
+ // getBudgets([
+ //            { name: "John", age: 21, budget: 23000 },
+ //        { name: "Steve",  age: 32, budget: 40000 },
+ //        { name: "Martin",  age: 16, budget: 2700 }
+ //    ]); 65700
+ // getBudgets([
+ //           { name: "John",  age: 21, budget: 29000 },
+ //        { name: "Steve",  age: 32, budget: 32000 },
+ //        { name: "Martin",  age: 16, budget: 1600 }
+ //    ]); 62600
+
+function getBudgets(arr){
+    var sum = 0; //STARTING OFF POINT FOR CALCULATION, EXCEPT FOR MULTIPLY.
+    for (var i=0; i < arr.length; i++){
+        sum = sum + arr[i].budget
+    }
+    return sum
 }
+
+console.log(getBudgets([
+    {name: "John", age: 21, budget: 23000},
+    {name: "Steve", age: 32, budget: 40000},
+    {name: "Martin", age: 16, budget: 2700}
+]));
