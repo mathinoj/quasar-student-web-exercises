@@ -13,12 +13,19 @@
     border: none;
 }
 
-h1{
+/*h1{*/
+/*    background-color: #E6ECF0;*/
+/*    opacity: 0.5;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    width: 100%;*/
+/*    font-weight: 400;*/
+/*}*/
+
+header h1{
     background-color: #E6ECF0;
     opacity: 0.5;
-    display: flex;
-    justify-content: center;
-    width: 100%;
+    font-weight: 400;
 }
 
 .jumbotron-fluid {

@@ -74,7 +74,6 @@
 // TO TEST THIS FUNCTION JUST COPY AND PASTE INTO BROWSER CONSOLE. THEN DO "TACOTUESDAY('')"
 
 
-
 // var fish1 = { type: "channel catfish", sizeInches: 18, locationCaught: "Lions Park", color: "blue"};
 // var fish2 = { type: "channel catfish", sizeInches: 19, locationCaught: "Lions Park", color: "blue"};
 // var fish3 = { type: "redfish", sizeInches: 22, locationCaught: "Braunig Lake", color: "red"};
@@ -256,11 +255,6 @@
 // })
 
 
-
-
-
-
-
 // var index = arrayBud.indexOf('budget');
 // console.log(index);
 
@@ -271,22 +265,21 @@
 // console.log(arrayBud[2])
 
 
-
 // console.log(arrayBud[arrayBud.length - 1])
 
-    // for (var i=0; i < arrayBud.length; i++){
-    //     console.log(arrayBud);
-    //     alert('The shape at index ' + i + ' is: ' + array[i]);
-    //     if(array[i].includes('budget')){
-    //         alert("Your total is " +array.budget);
-    //         console.log(budget);
-    //     }
-    // }
-    // var sum = null;
-    //
-    // array.forEach(function(value){
-    //     console.log(sum += value.budget);
-    // });
+// for (var i=0; i < arrayBud.length; i++){
+//     console.log(arrayBud);
+//     alert('The shape at index ' + i + ' is: ' + array[i]);
+//     if(array[i].includes('budget')){
+//         alert("Your total is " +array.budget);
+//         console.log(budget);
+//     }
+// }
+// var sum = null;
+//
+// array.forEach(function(value){
+//     console.log(sum += value.budget);
+// });
 // }
 // console.log(gotBudgets)
 
@@ -337,8 +330,6 @@
 //   minMax([1]) ➞ [1, 1]
 //
 //  Notes All test arrays will have at least one element and are valid
-
-
 
 
 // function big(){
@@ -398,8 +389,8 @@
 //         console.log(averageSales)
 //
 //     return (num/arr.length)
-    // arr.forEach(function (value){
-    // return (num /= value.sales)
+// arr.forEach(function (value){
+// return (num /= value.sales)
 
 // }
 
@@ -412,13 +403,12 @@
 // }
 
 
-
 // DT UNIX TO STRING, CONVERTS SECONDS TO A DATE
 // var date = new Date(1618317040).toLocaleDateString("en-US")
 // console.log(date)
 
-var date = new Date(1618317040)
-console.log(date)
+// var date = new Date(1618317040)
+// console.log(date)
 
 // Date objects are created with the new Date() constructor. There are 4 ways to create a new date object:
 //     new Date()
@@ -431,9 +421,89 @@ console.log(date)
 // https://www.w3schools.com/js/js_dates.asp
 // https://coderrocketfuel.com/article/convert-a-unix-timestamp-to-a-date-in-vanilla-javascript THIS USES BASIC JS, SEE BELOW
 
-var thisMorning = 1633702800;
-function convert(dtNum){
-    var dtMilliSecs = dtNum * 1000 //seconds * 1000 = our milliseconds
-    var dateObj = new Date(dtMilliSecs); //pass in milliseconds to Date(constructor)
-    return dateObj.toLocaleString();
+// var thisMorning = 1633702800;
+// function convert(dtNum){
+//     var dtMilliSecs = dtNum * 1000 //seconds * 1000 = our milliseconds
+//     var dateObj = new Date(dtMilliSecs); //pass in milliseconds to Date(constructor)
+//     return dateObj.toLocaleString();
+// }
+
+
+// Get Sum of People's Budget
+// Create the function named getBudgets that takes an array with objects and returns the sum of people's budgets.
+//
+// Examples
+//TODO []=array
+// {} inside array = object
+// {stuff inside curly brackets is a whole element}
+// {singular items within curly braCkets (i.e. name, age, budget) is a property}
+
+// getBudgets([
+//            { name: "John", age: 21, budget: 23000 },
+//        { name: "Steve",  age: 32, budget: 40000 },
+//        { name: "Martin",  age: 16, budget: 2700 }
+//    ]); 65700
+
+// getYo([
+//     {name: "John", age: 21, budget: 29000},
+//     {name: "Steve", age: 32, budget: 32000},
+//     {name: "Martin", age: 16, budget: 1600}
+// ]);
+
+function getBudgets(arr) {
+    var bum = 0; //STARTING OFF POINT FOR CALCULATION, EXCEPT FOR MULTIPLY,you'd like do 1. IF YOU DOING STRINGS "", OBJECT {}, ARRAY []
+    for (var i = 0; i < arr.length; i++) {
+        bum = bum + arr[i].budget
+    }
+    return bum
 }
+
+
+console.log(getBudgets([
+    {name: "John", age: 21, budget: 23000},
+    {name: "Steve", age: 32, budget: 40000},
+    {name: "Martin", age: 16, budget: 2700},
+    {name: "Matt", age: 17, budget: 32700}
+]));
+
+function getAge(array) {
+    var agers = 0;
+    for (var i = 0; i < array.length; i++) {
+        agers = agers + array[i].age
+    }
+    return agers
+}
+
+console.log(getAge([
+    {name: "John", age: 21, budget: 23000},
+    {name: "Steve", age: 32, budget: 40000},
+    {name: "Martin", age: 16, budget: 2700},
+    {name: "Matt", age: 17, budget: 32700}
+]));
+
+// TODO THIS PUTS A SPACE BUT IF YOU PUT COMMA IT WILL INPUT THEM IN RANDOM AREAS
+function getNames(blah) {
+    var names = " "
+    for (var i = 0; i < blah.length; i++) {
+        names = names + (blah[i].name + ' ')
+    }
+    return names
+}
+console.log(getNames([
+    {name: "John", age: 21, budget: 23000},
+    {name: "Steve", age: 32, budget: 40000},
+    {name: "Martin", age: 16, budget: 2700},
+    {name: "Matt", age: 17, budget: 32700}
+]));
+
+//TODO THIS IS HOW YOU COULD DO IT BUT NOT RECEIVE RANDOM COMMAS
+var getYo = [
+    {name: "John", age: 21, budget: 29000},
+    {name: "Steve", age: 32, budget: 32000},
+    {name: "Martin", age: 16, budget: 1600}
+]
+
+var namez = getYo.map(function (lame) {
+    return lame.name
+}).join(', ')
+console.log(namez);
