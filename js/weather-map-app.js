@@ -93,17 +93,6 @@ var geocoderSearch = new MapboxGeocoder({
 
 })
 
-// document.getElementById('searcher').appendChild(geocoderSearch.onAdd(map));
-// console.log(geocoderSearch)
-
-// var newLngLat = geocoderSearch.r.mapMarker
-// console.log(newLngLat)
-
-
-// var listener = function (e) {
-//     e.preventDefault();
-// }
-
 var userInput = document.getElementById('search');
 
 document.querySelector('form.form-inline').addEventListener('submit', function (e) {
@@ -114,15 +103,6 @@ document.querySelector('form.form-inline').addEventListener('submit', function (
     // Clicking on a link, prevent the link from following the URL
     console.log(userInput.value);
 });
-
-
-// geocode('', firstMapboxLectureKey).then(function (where){
-//     console.log(where)
-// })
-
-// geocode('Austin, TX', firstMapboxLectureKey).then(function(where){
-//     console.log(where)
-// })
 
 
 document.getElementById("submitter").addEventListener("click", function (e) {
