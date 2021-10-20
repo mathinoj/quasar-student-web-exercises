@@ -7,7 +7,7 @@ function getDogs(){
     return fetch(API_URL)
         .then((response)=>response.json())
 }
-// getDogs().then((dogs)=>console.log(dogs))
+getDogs().then((dogs)=>console.log(dogs))
 
 function getDog(id){
     return fetch(`${API_URL}/${id}`)
@@ -73,3 +73,7 @@ let woody = {
 };
 
 createDawg(woody).then((createDawg)=>console.log(createDawg));
+
+
+
+

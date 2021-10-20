@@ -432,8 +432,8 @@
 // Get Sum of People's Budget
 // Create the function named getBudgets that takes an array with objects and returns the sum of people's budgets.
 //
-// Examples
-//TODO []=array
+// TODO THE STUFF BELOW WAS STUFF COVERED BY TUTORING WITH SHANSHAN ON 10/16
+// TODO []=array
 // {} inside array = object
 // {stuff inside curly brackets is a whole element}
 // {singular items within curly braCkets (i.e. name, age, budget) is a property}
@@ -450,22 +450,142 @@
 //     {name: "Martin", age: 16, budget: 1600}
 // ]);
 
-function getBudgets(arr) {
-    var bum = 0; //STARTING OFF POINT FOR CALCULATION, EXCEPT FOR MULTIPLY,you'd like do 1. IF YOU DOING STRINGS "", OBJECT {}, ARRAY []
-    for (var i = 0; i < arr.length; i++) {
-        bum = bum + arr[i].budget
+// function getBudgets(arr) {
+//     var bum = 0; //STARTING OFF POINT FOR CALCULATION, EXCEPT FOR MULTIPLY,you'd like do 1. IF YOU DOING STRINGS "", OBJECT {}, ARRAY []
+//     for (var i = 0; i < arr.length; i++) {
+//         bum = bum + arr[i].budget
+//     }
+//     return bum
+// }
+//
+//
+// console.log(getBudgets([
+//     {name: "John", age: 21, budget: 23000},
+//     {name: "Steve", age: 32, budget: 40000},
+//     {name: "Martin", age: 16, budget: 2700},
+//     {name: "Matt", age: 17, budget: 32700}
+// ]));
+//
+// function getAge(array) {
+//     var agers = 0;
+//     for (var i = 0; i < array.length; i++) {
+//         agers = agers + array[i].age
+//     }
+//     return agers
+// }
+//
+// console.log(getAge([
+//     {name: "John", age: 21, budget: 23000},
+//     {name: "Steve", age: 32, budget: 40000},
+//     {name: "Martin", age: 16, budget: 2700},
+//     {name: "Matt", age: 17, budget: 32700}
+// ]));
+
+// TODO THIS PUTS A SPACE BUT IF YOU PUT COMMA IT WILL INPUT THEM IN RANDOM AREAS
+// function getNames(blah) {
+//     var names = " "
+//     for (var i = 0; i < blah.length; i++) {
+//         names = names + (blah[i].name + ' ')
+//     }
+//     return names
+// }
+// console.log(getNames([
+//     {name: "John", age: 21, budget: 23000},
+//     {name: "Steve", age: 32, budget: 40000},
+//     {name: "Martin", age: 16, budget: 2700},
+//     {name: "Matt", age: 17, budget: 32700}
+// ]));
+//
+// //TODO THIS IS HOW YOU COULD DO IT BUT NOT RECEIVE RANDOM COMMAS
+// var getYo = [
+//     {name: "John", age: 21, budget: 29000},
+//     {name: "Steve", age: 32, budget: 32000},
+//     {name: "Martin", age: 16, budget: 1600}
+// ]
+//
+// var namez = getYo.map(function (lame) {
+//     return lame.name
+// }).join(', ')
+// console.log(namez);
+
+// TODO THE STUFF ABOVE IS STUFF COVERED WITH SHANSHAN TUTORING ON 10/16
+
+
+// TODO          ASSMENT REVIEW!!!!!!!!!!!!!!!! 10/18
+function isNegative(num){
+    // return num<0;
+    // OOOOOORRRRR
+    if (num < 0){
+        return true;
+    } else {
+        return false;
     }
-    return bum
 }
 
+function isTen(num){
+    // return num=10;
+    // OOOOOOOORRRRRR
+if (num === 10){
+    return true;
+}else{
+    return false
+}
+}
 
-console.log(getBudgets([
-    {name: "John", age: 21, budget: 23000},
-    {name: "Steve", age: 32, budget: 40000},
-    {name: "Martin", age: 16, budget: 2700},
-    {name: "Matt", age: 17, budget: 32700}
-]));
+function double(num){
+    // return num*2;
+    //OOOOOORRRRRR
+if (num === num*2){
+    return true;
+}else{
+    return false
+}
+}
 
+//SOLUTION ONE TO REMOVE 9s
+// function remove9S(arr){
+//     var results = [];
+//     for (var i = 0; i<arr.length; i++){
+//         if(arr[i] !== 9){
+//             results.push(arr[i]);
+//         }
+//     }
+//     return results
+// }
+
+//SOLUTION TWO TO REMOVE 9s
+// function remove9S(arr){
+//     return arr.filter(function(num){return num !== 9}) //
+// }
+
+// SOLUTION TWO WRITTEN FOR BEGINNER JS VIEW, ITS SAME AS THE ONE ABOVE
+function remove9S(arr){
+return arr.filter(function(num){
+    return num !== 9
+})
+}
+
+function average(arr){
+    var sum = 0;
+    for (var i = 0; i < arr.length; i++){
+        sum += arr[i]
+    }
+    return sum / arr.length;
+}
+
+// SOLUTION ONE FOR COUNT ODDS
+// function countOdds(arr){
+//     return arr.filter(function (num){return num % 2 !== 0}).length;
+// }
+//
+// // SOLUTION TWO FOR COUNT ODDS
+// function countOdds(arr){
+//     return arr.filter(function (num){
+//         return num % 2 !== 0
+//     }).length;
+// }
+
+// SOLUTION THREE FOR COUNT ODDS
 function getAge(array) {
     var agers = 0;
     for (var i = 0; i < array.length; i++) {
@@ -474,36 +594,81 @@ function getAge(array) {
     return agers
 }
 
-console.log(getAge([
-    {name: "John", age: 21, budget: 23000},
-    {name: "Steve", age: 32, budget: 40000},
-    {name: "Martin", age: 16, budget: 2700},
-    {name: "Matt", age: 17, budget: 32700}
-]));
+// SOLUTIN ONE -- DOUGS WAY
+// function averageSales(arr){
+//     let arrayOfSales = arr.map(function (person){return person.sales});
+//     return average(arrayOfSales);
+//}
 
-// TODO THIS PUTS A SPACE BUT IF YOU PUT COMMA IT WILL INPUT THEM IN RANDOM AREAS
-function getNames(blah) {
-    var names = " "
-    for (var i = 0; i < blah.length; i++) {
-        names = names + (blah[i].name + ' ')
+//SOLUTION TWO -- YOU CAME UP WITH THIS ON OWN
+function averageSales(arr){
+    var sum = 0
+    for (var i = 0; i < arr.length; i++){
+        sum += arr[i].sales;
     }
-    return names
+    return sum / arr.length
 }
-console.log(getNames([
-    {name: "John", age: 21, budget: 23000},
-    {name: "Steve", age: 32, budget: 40000},
-    {name: "Martin", age: 16, budget: 2700},
-    {name: "Matt", age: 17, budget: 32700}
-]));
 
-//TODO THIS IS HOW YOU COULD DO IT BUT NOT RECEIVE RANDOM COMMAS
-var getYo = [
-    {name: "John", age: 21, budget: 29000},
-    {name: "Steve", age: 32, budget: 32000},
-    {name: "Martin", age: 16, budget: 1600}
-]
+function convertNameToObject(name){
+    let nameArr = name.split(' ');
+    return{
+        firstName: nameArr[0],
+        lastName: nameArr[1]
+    }
+}
 
-var namez = getYo.map(function (lame) {
-    return lame.name
-}).join(', ')
-console.log(namez);
+//SOLUTION ONE - LONG WAY
+// function countVowels(input){
+//     var inputCharacterArr = input.split('');
+//     //console.log(inputCharacterArr)
+//     var vowelCount = 0;
+//     for (var i = 0; i < inputCharacterArr.length; i++){
+//         var character = inputCharacterArr[i];
+//         if(character.toLowerCase() === 'a' || character.toLowerCase() ==='e' || character.toLowerCase() ==='i' || character.toLowerCase() ==='o' || character.toLowerCase() ==='u'){
+//            vowelCount++
+//         }
+//     }
+//     return vowelCount;
+// }
+
+//SOLUTION TWO - SHORT WAY
+function countVowels(input){
+    var inputCharacterArr = input.split('');
+    return inputCharacterArr.filter((character)=>'aeiou'.includes(character.toLowerCase())).length;
+}
+
+function analyzeWord(word){
+    return{
+        word: word,
+        numberOfLetters: word.length,
+        numberOfVowels: countVowels(word)
+    }
+}
+
+Function accepts a string that is a first and last name seperated by a space and a returns a string that has the first and last name capitalized
+SOLUTION ONE
+function capitalizeName(name){
+    let nameObject = convertNameToObject(name);
+    let firstName = nameObject.firstName;
+    let lastName = nameObject.lastName;
+
+    return firstName[0].toUpperCase() + firstName.substring(1, firstName.length).toLowerCase() + ' ' + lastName[0].toUpperCase() + lastName.substring(1, lastName.length).toLowerCase()
+
+    // console.log(nameObject.firstName);
+    // console.log(nameObject.firstName + ' ' + nameObject.lastName);
+    console.log(nameObject.firstName[0].toUpperCase() + nameObject.firstName.substring(1, nameObject.firstName.length).toLowerCase());
+}
+
+SOLUTION TWO - CLEANER WAY
+function capitalizeWord(word){
+    return word[0].toUpperCase() + word.substring(1, word.length).toLowerCase()
+}
+
+function capitalizeName(name){
+    let nameObject = convertNameToObject(name);
+    return capitalizeWord(nameObject.firstName) + ' ' + capitalizeWord(nameObject.lastName)
+}
+
+//TODO THE ABOVE CODE IS FROM REVIEW ON 10/18
+
+
