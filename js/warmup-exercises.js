@@ -436,7 +436,7 @@
 // TODO []=array
 // {} inside array = object
 // {stuff inside curly brackets is a whole element}
-// {singular items within curly braCkets (i.e. name, age, budget) is a property}
+// {singular items within curly brackets (i.e. name, age, budget) is a property}
 
 // getBudgets([
 //            { name: "John", age: 21, budget: 23000 },
@@ -511,7 +511,7 @@
 // TODO THE STUFF ABOVE IS STUFF COVERED WITH SHANSHAN TUTORING ON 10/16
 
 
-// TODO          ASSMENT REVIEW!!!!!!!!!!!!!!!! 10/18
+//TODO          ASSMENT REVIEW!!!!!!!!!!!!!!!! 10/18
 function isNegative(num){
     // return num<0;
     // OOOOOORRRRR
@@ -645,8 +645,8 @@ function analyzeWord(word){
     }
 }
 
-Function accepts a string that is a first and last name seperated by a space and a returns a string that has the first and last name capitalized
-SOLUTION ONE
+// Function accepts a string that is a first and last name seperated by a space and a returns a string that has the first and last name capitalized
+// SOLUTION ONE
 function capitalizeName(name){
     let nameObject = convertNameToObject(name);
     let firstName = nameObject.firstName;
@@ -659,7 +659,7 @@ function capitalizeName(name){
     console.log(nameObject.firstName[0].toUpperCase() + nameObject.firstName.substring(1, nameObject.firstName.length).toLowerCase());
 }
 
-SOLUTION TWO - CLEANER WAY
+//SOLUTION TWO - CLEANER WAY
 function capitalizeWord(word){
     return word[0].toUpperCase() + word.substring(1, word.length).toLowerCase()
 }
@@ -671,4 +671,129 @@ function capitalizeName(name){
 
 //TODO THE ABOVE CODE IS FROM REVIEW ON 10/18
 
+let numbers = [1, 2, 3, 4, 5];
+numbers.map(n => n * 3)
+console.log(numbers);
+console.log(numbers.map);
 
+
+//TODO JS II RETAKE REVIEW 10/25 ***********DOWN BELOW THIS LINE***************
+
+//Function that accepts argument and returns a string 'number' or 'not number' based on if input is a number
+function checkForNumber(input){
+    if (typeof input === "number"){
+        return "number";
+    } else {
+        return "not number"
+    }
+}
+
+//Function returns string "even" or 'odd' when passed a numeric argument. The resulting string should represent if number is even or odd.
+function evenOrOdd(input){
+    if(input % 2 === 0){
+        return "even"
+    } else {
+        return "odd"
+    }
+}
+
+//Function accepts array of numbers and returns array with double value of each number
+function doubleTheElements(arr){
+    //Need to store the results.
+    let results = [];
+    //Loop through input array and store the results in our var.
+    for (let i = 0; i < arr.length; i++){
+        results.push(arr[i] * 2)
+    }
+    //return the results
+    return results
+}
+
+//Function accepts array of numbers and returns the sum of those numbers
+function sumOfElements(arr){
+    //Create a var to store our running total
+    let sum = 0;
+    //loop over all of the elements
+    for(let i = 0; i < arr.length; i++){
+        sum += arr[i];
+    }
+    //return results
+    return sum
+}
+
+//Function accepts array of objects where each object represents a product from a store that has a price property. The function should return the total of every objects price property
+// totalPrice([
+//     {name: 'tomatoes', price: 4},
+//     {name: 'potatoes', price: 6},
+//     {name: 'wine', price: 16}
+// ])
+
+function totalPrice(orderItems){
+    let totalPrice = 0;
+    for(let i = 0; i < orderItems.length; i++){
+        totalPrice += orderItems[i].price
+    }
+    return totalPrice
+    // return sumOfElements(orderItems.map(function (orderItems){
+    //     return orderItem.price
+    // }));  todo THIS IS A SHORTENED VERSION AND YOU WOULD CUT OUT 'let totalPrice - return totalPrice'
+}
+
+//Function accepts an array of objects where each object represents a product from a store that has a price property. The function should return the highest price value from the array.
+
+// function findHighestPrice(orderItems){
+//     let highestPrice = 0;
+//     orderItems.forEach(function (orderItem) {
+//         if(orderItem.price > highestPrice = orderItem.price;
+//     }
+//     })
+//
+//             return findHighestPrice;
+// }
+
+//Function accept an object that represents a customers transaction. The object passed into the function should have customerName. items, and clubMember properties. A customer will qualify for a discount if they have a total form the items property of 150 or more, or if they are club member. Should return a boolean
+
+function discountCheck(order){
+    let orderTotal = totalPrice(order.items);
+
+    return orderTotal >= 150 || order.clubMember;
+}
+
+//Function with two parameters, a string that contains a name, and a number representing the products price, and returns an a object with properties name and price.
+//newProduct([{'tomatoes', 3.99} , {name:'yu-gi-oh', price: 5.89])
+function newProduct(name, price){
+    return{
+        name,
+        price
+    }
+}
+
+//Function accepts a string and returns the number of words in that string.
+function countWords(input){
+    if(input === ''){ //THIS Part below is to return a number, which was required as part of test
+        return 0;
+    }
+    return input.split(' ').length;
+}
+
+//Function takes an integer and will return an object describing diff features of the input as a number.
+//ex: describeNumber(45) // {value: 45, evenOrOdd: "odd", numberOfDigits: 2};
+//ex: describeNumber(360) // {value: 360, evenOrOdd: "even", numberOfDigits: 3};
+//ex: describeNumber(360) // {value: 0, evenOrOdd: "even", numberOfDigits: 1};
+
+function describeNumber(input){
+    return{
+        value: parseInt(input), //string 123 input did not match the number 123 input, that is why parseInt was used
+        evenOrOdd: evenOrOdd(input),
+        numberOfDigits: input.toString().length
+    }
+}
+
+//Function that accepts a string that has several words each seperated by a space, and returns a string with each word in all caps, and with spaces replaced by underscores (ex SCREAMING_SNAKE)
+// screamingSnakeCse('Lord Palmerston') = LORD_PALMERSTON
+function screamingSnakeCase(input){
+    return input.split(' ').join('_').toUpperCase(); ONE WAY FOR THIS TO BE SOLVE
+    // IN CONSOLE "welcome to codeup".split(' '); = 'welcome', 'to', 'codeup'
+    // IN CONSOLE "welcome to codeup".split(' ').join('_'); = 'welcome_to_codeup'
+    // IN CONSOLE "welcome to codeup".split(' ').join('_').toUpperCase(); = 'WELCOME_TO_CODEUP'
+}
